@@ -35,13 +35,13 @@ For development, we recommend running two separate terminals. One for the server
 **Terminal 1**
 
 ```bash
-npm run dev:server # if you ran `npm start` above, this one is already running.
+npm run dev:server # `npm start` above starts a server, but doesn't rebuild your Svelte components on change.
 ```
 
 **Terminal 2**
 
 ```bash
-npm run dev:rollup
+npm run dev:rollup # This rebuilds your svelte components on change.
 ```
 
 Once you have these two terminals open, edit a component file in `src`, save it, and reload the page to see your changes.
