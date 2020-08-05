@@ -35,7 +35,7 @@ For development, we recommend running two separate terminals. One for the server
 **Terminal 1**
 
 ```bash
-npm run dev:server
+npm run dev:server # if you ran `npm start` above, this one is already running.
 ```
 
 **Terminal 2**
