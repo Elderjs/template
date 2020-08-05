@@ -17,15 +17,15 @@ module.exports = {
     stacks: false,
     hooks: false,
     performance: false,
-    build: true,
-    automagic: true
+    build: false,
+    automagic: false,
   },
   hooks: {
     // disable: ['elderWriteHtmlFileToPublic'], // this is used to disable internal hooks. Uncommenting this would disabled writing your files on build.
   },
   plugins: {
-    'elderjs-plugin-markdown':{
-      routes: ["blog"],
-    }
+    'elderjs-plugin-markdown': {
+      routes: ['blog'],
+    },
   },
 };

@@ -4,12 +4,18 @@
   "description": "",
   "main": "./build/server.js",
   "scripts": {
-    "start": "run-p dev:*",
-    "build": "npm run build:rollup && npm run build:html",
+    "start": "npm run build:rollup && npm run dev:server",
+    "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
     "build:rollup": "./node_modules/.bin/rollup -c",
     "build:html": "node ./src/build.js",
     "dev:rollup": "./node_modules/.bin/rollup  -c -w --no-watch.clearScreen",
-    "dev:server": "nodemon"
+    "dev:server": "nodemon",
+    "eslint": "eslint --ext .js .",
+    "eslint:fix": "eslint --fix --ext .js ."
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=12.16.1"
   },
   "dependencies": {
     "@elderjs/elderjs": "^0.0.4",
@@ -42,7 +48,9 @@
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@rollup/plugin-replace": "^2.3.3",
     "autoprefixer": "^9.8.6",
+    "eslint": "^7.4.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-config-prettier": "^6.11.0",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",

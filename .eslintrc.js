@@ -1,7 +1,12 @@
 module.exports = {
   root: true,
+  env: {
+    node: true,
+    commonjs: false,
+    es2020: true,
+  },
   plugins: ['prettier'],
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 
   rules: {
     'prettier/prettier': 'error',
