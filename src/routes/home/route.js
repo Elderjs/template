@@ -1,4 +1,4 @@
 module.exports = {
-  all: () => [{ slug: "/" }],
+  all: () => [{ slug: '/' }],
   permalink: ({ request }) => request.slug,
 };

@@ -1,7 +1,7 @@
 <script>
-  import HookList from "../../components/HookList/HookList.svelte";
-  import BlogTeaser from "../../components/BlogTeaser/BlogTeaser.svelte";
-  import Clock from "../../components/Clock/Clock.svelte";
+  import HookList from '../../components/HookList/HookList.svelte';
+  import BlogTeaser from '../../components/BlogTeaser/BlogTeaser.svelte';
+  import Clock from '../../components/Clock/Clock.svelte';
   export let data, link;
 
   const hooks = data.hookInterface.map((hook) => ({ ...hook, link: link.hooks({ slug: hook.hook }) }));

@@ -12,11 +12,9 @@ const sveltePreprocess = require('svelte-preprocess');
 const json = require('@rollup/plugin-json');
 const glob = require('glob');
 const path = require('path');
-const del = require('del');
 const fs = require('fs-extra');
 
 const { getElderConfig, partialHydration } = require('@elderjs/elderjs');
-
 
 const { locations } = getElderConfig();
 const { ssrComponents, clientComponents } = locations.svelte;
@@ -36,27 +34,11 @@ const preprocess = sveltePreprocess({
   },
 });
 
-
-
-console.log("Clearing out public folder.");
-// empty public folder.
-del.sync(`${path.resolve(process.cwd(), locations.public)}*`);
-
-
-
-
-// clear out ElderJs SSR and Client Svelte Components
-del.sync([`${ssrComponents}*`, `${clientComponents}*`]);
-
-
 // copy assets folder to public destination
-
-glob.sync(path.resolve(process.cwd(), locations.srcFolder, './assets/**/*')).forEach(file =>{
+glob.sync(path.resolve(process.cwd(), locations.srcFolder, './assets/**/*')).forEach((file) => {
   fs.ensureDirSync(path.resolve(process.cwd(), locations.assets));
-  fs.copyFileSync(file, path.resolve(process.cwd(), locations.assets, file.split('/').pop()))
+  fs.copyFileSync(file, path.resolve(process.cwd(), locations.assets, file.split('/').pop()));
 });
-
-
 
 // Add ElderJs Peer deps to public if they exist.
 const elderJsPeerDeps = [
@@ -89,7 +71,7 @@ const templates = glob.sync('./src/routes/*/*.svelte').reduce((out, cv) => {
       output: {
         dir: ssrComponents,
         format: 'cjs',
-        exports: 'auto'
+        exports: 'auto',
       },
     }),
   );
@@ -105,7 +87,7 @@ const layouts = glob.sync('./src/layouts/*.svelte').reduce((out, cv) => {
       output: {
         dir: ssrComponents,
         format: 'cjs',
-        exports: 'auto'
+        exports: 'auto',
       },
     }),
   );
@@ -137,7 +119,7 @@ if (production) {
       output: {
         dir: ssrComponents,
         format: 'cjs',
-        exports: 'auto'
+        exports: 'auto',
       },
       multiInputConfig: multiInput({
         relative: 'src/components/',
@@ -147,35 +129,33 @@ if (production) {
   ];
 } else {
   // watch/dev build bundles each component individually for faster reload times during dev.
-  const sharedComponents = glob
-    .sync(path.resolve(__dirname, './src/components/*/*.svelte'))
-    .reduce((out, cv) => {
-      const file = cv.replace(`${__dirname}/`, '');
-      // console.log(file, cv);;
-      out.push(
-        createBrowserConfig({
-          input: file,
-          output: {
-            dir: clientComponents,
-            entryFileNames: 'entry[name].js',
-            sourcemap: !production,
-            format: 'system',
-          },
-        }),
-      );
-      out.push(
-        createSSRConfig({
-          input: file,
-          output: {
-            dir: ssrComponents,
-            format: 'cjs',
-            exports: 'auto'
-          },
-        }),
-      );
+  const sharedComponents = glob.sync(path.resolve(__dirname, './src/components/*/*.svelte')).reduce((out, cv) => {
+    const file = cv.replace(`${__dirname}/`, '');
+    // console.log(file, cv);;
+    out.push(
+      createBrowserConfig({
+        input: file,
+        output: {
+          dir: clientComponents,
+          entryFileNames: 'entry[name].js',
+          sourcemap: !production,
+          format: 'system',
+        },
+      }),
+    );
+    out.push(
+      createSSRConfig({
+        input: file,
+        output: {
+          dir: ssrComponents,
+          format: 'cjs',
+          exports: 'auto',
+        },
+      }),
+    );
 
-      return out;
-    }, []);
+    return out;
+  }, []);
   configs = [...configs, ...templates, ...layouts, ...sharedComponents];
 }
 
@@ -268,6 +248,5 @@ function createSSRConfig({ input, output, multiInputConfig = false }) {
 
   return config;
 }
-
 
 module.exports = configs;

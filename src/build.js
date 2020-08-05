@@ -1,3 +1,3 @@
-const { build } = require("@elderjs/elderjs");
+const { build } = require('@elderjs/elderjs');
 
 build();

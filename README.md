@@ -19,13 +19,32 @@ cd elderjs-app
 npm install # or just yarn
 ```
 
-### Start Development:
+### Start Project:
 
 ```bash
 npm start
 ```
 
-Navigate to [localhost:3000](http://localhost:3000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+Navigate to [localhost:3000](http://localhost:3000). You should see your app running. 
+
+
+### Development:
+
+For development, we recommend running two separate terminals. One for the server and the other for rollup.
+
+**Terminal 1**
+
+```bash
+npm run dev:server
+```
+
+**Terminal 2**
+
+```bash
+npm run dev:rollup
+```
+
+Once you have these two terminals open, edit a component file in `src`, save it, and reload the page to see your changes.
 
 ### To Build HTML:
 

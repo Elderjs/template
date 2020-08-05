@@ -15,4 +15,4 @@ const hooks = [
   //   },
   // },
 ];
-export default hooks;
+module.exports = hooks;

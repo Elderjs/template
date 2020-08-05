@@ -1,4 +1,4 @@
-const {hookInterface} = require('@elderjs/elderjs')
+const { hookInterface } = require('@elderjs/elderjs');
 
 module.exports = {
   all: () =>
@@ -7,4 +7,3 @@ module.exports = {
     })),
   permalink: ({ request }) => `/${request.slug}/`,
 };
-
