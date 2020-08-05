@@ -15,7 +15,6 @@ cd elderjs-app
 ### Install the dependencies:
 
 ```bash
-cd elderjs-app
 npm install # or just yarn
 ```
 
