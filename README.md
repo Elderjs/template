@@ -34,3 +34,10 @@ npm run build
 ```
 
 This will build all of your html into the /public/ folder. 
+
+
+### What to Expect
+
+This template is designed to be part demo, part tutorial. We hope you enjoy if you hit snags please create a GitHub issue. :)
+
+<img width="1452" alt="image" src="https://user-images.githubusercontent.com/3580879/89454786-358ba380-d72f-11ea-975a-1c0a6aa5a37e.png">
