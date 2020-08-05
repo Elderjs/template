@@ -26,6 +26,7 @@
     border: 1px solid #ddd;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    background: white;
   }
   .about {
     margin-bottom: 2rem;
