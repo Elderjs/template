@@ -39,10 +39,10 @@ Copy and paste the hook below into your `hooks.ts` file.
 
 ```javascript
   {
-    hook: 'footerStack',
+    hook: 'stacks',
     name: 'addAnalyticstoFooter',
     description: 'Add analytics to Footer.',
-    priority: 99, // we want it to be last
+    priority: 100, // we want it to be last
     run: async ({ footerStack }) => {
       footerStack.push({
         source: 'hooks',
@@ -74,12 +74,12 @@ The 'hookInterface' is designed to solve that problem. While you can explore all
 
 Add the hook below to your `hooks.ts` file and reload this page:
 
-```
+```javascript
 {
- hook: 'dataStart',
+ hook: 'data',
  name: 'maliciousHook',
  description: 'Can we break anything?',
- priority: 2,
+ priority: 2, // this runs just after Elder.js's functions run.
  run: async ({ helpers, data, settings, request, query }) => {
    settings = null;
    request = null;

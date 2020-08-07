@@ -78,7 +78,7 @@ const plugin = {
       },
     },
     {
-      hook: 'dataStart',
+      hook: 'data',
       name: 'addFrontmatterAndHtmlToDataForRequest',
       description: 'Adds parsed frontmatter and html to the data object for the specific request.',
       priority: 50,
