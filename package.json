@@ -1,14 +1,14 @@
 {
   "name": "elderjs-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps. The template lives at https://github.com/elderjs/template and the Elder.js source is here: https://github.com/elderjs/elderjs",
   "main": "./build/server.js",
   "scripts": {
     "start": "npm run build:rollup && npm run dev:server",
     "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
-    "build:rollup": "./node_modules/.bin/rollup -c",
+    "build:rollup": "rollup -c",
     "build:html": "node ./src/build.js",
-    "dev:rollup": "./node_modules/.bin/rollup  -c -w --no-watch.clearScreen",
+    "dev:rollup": "rollup  -c -w --no-watch.clearScreen",
     "dev:server": "nodemon",
     "eslint": "eslint --ext .js .",
     "eslint:fix": "eslint --fix --ext .js ."
@@ -18,7 +18,7 @@
     "node": ">=12.16.1"
   },
   "dependencies": {
-    "@elderjs/elderjs": "^0.0.4",
+    "@elderjs/elderjs": "^0.0.11",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
@@ -64,10 +64,31 @@
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nick Reese",
+  "license": "MIT",
   "files": [
     "index.js",
     "elderjs"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elderjs/template.git"
+  },
+  "keywords": [
+    "svelte",
+    "elderjs",
+    "ssr",
+    "static",
+    "site",
+    "generator",
+    "seo",
+    "ssg",
+    "template",
+    "partial",
+    "hydration"
+  ],
+  "bugs": {
+    "url": "https://github.com/Elderjs/template/issues"
+  },
+  "homepage": "https://github.com/Elderjs/template#readme"
 }
