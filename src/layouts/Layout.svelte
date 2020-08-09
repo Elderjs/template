@@ -19,7 +19,7 @@
 </style>
 
 <svelte:head>
-  <link rel="stylesheet" href="{settings.locations.assets.replace('./public', '')}/style.css" />
+  <link rel="stylesheet" href="{settings.locations.assets.replace('./public', '')}style.css" />
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>
 <div class="conainter">

@@ -13,6 +13,7 @@ const json = require('@rollup/plugin-json');
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs-extra');
+const del = require('del');
 
 const { getElderConfig, partialHydration } = require('@elderjs/elderjs');
 
@@ -33,6 +34,9 @@ const preprocess = sveltePreprocess({
     plugins: [require('autoprefixer')],
   },
 });
+
+// clear out components so there are no conflicts due to hashing.
+del.sync([`${ssrComponents}*`, `${clientComponents}*`]);
 
 // copy assets folder to public destination
 glob.sync(path.resolve(process.cwd(), locations.srcFolder, './assets/**/*')).forEach((file) => {
