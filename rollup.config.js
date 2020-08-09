@@ -38,6 +38,7 @@ const preprocess = sveltePreprocess({
 // clear out components so there are no conflicts due to hashing.
 del.sync([`${ssrComponents}*`, `${clientComponents}*`]);
 
+// TODO: this should happen on every change. Need to add to a single one of the configs.
 // copy assets folder to public destination
 glob.sync(path.resolve(process.cwd(), locations.srcFolder, './assets/**/*')).forEach((file) => {
   fs.ensureDirSync(path.resolve(process.cwd(), locations.assets));

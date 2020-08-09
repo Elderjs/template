@@ -1,5 +1,5 @@
 {
-  "watch": ["./build", "./src", "./elderjs", "./elder.config.js", "./__ELDER__/"],
+  "watch": ["src", "elder.config.js", "__ELDER__"],
   "ext": ".ts,.js,.svelte,.md",
   "delay": "500",
   "ignore": [],
