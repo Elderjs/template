@@ -1,2 +1,2 @@
 [build]
-  publish = "build-output/"
+  publish = "public/"
