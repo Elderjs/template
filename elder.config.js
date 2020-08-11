@@ -17,7 +17,7 @@ module.exports = {
     stacks: false,
     hooks: false,
     performance: false,
-    build: true,
+    build: false,
     automagic: false,
   },
   hooks: {
