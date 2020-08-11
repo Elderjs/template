@@ -2,7 +2,7 @@
   "name": "elderjs-template",
   "version": "1.0.0",
   "description": "This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps. The template lives at https://github.com/elderjs/template and the Elder.js source is here: https://github.com/elderjs/elderjs",
-  "main": "./build/server.js",
+  "main": "./src/build.js",
   "scripts": {
     "start": "npm run build:rollup && npm run dev:server",
     "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
