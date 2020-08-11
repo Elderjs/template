@@ -139,4 +139,9 @@
   Hooks are the primary way to customize Elder.js and the list below outlines exactly what each hook can be used for.
 </p>
 
+<img
+  src="https://elderguide.com/images/elderjs-hook-lifescyle-v3.png"
+  alt="Elder.js hook Lifecycle"
+  style="max-width:100%; margin:1rem 0;" />
+
 <HookList {hooks} />
