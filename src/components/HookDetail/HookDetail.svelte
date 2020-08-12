@@ -80,17 +80,8 @@
     font-size: 14px;
   }
 
-  .hook p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
   .overview {
     margin-right: 1rem;
-  }
-
-  h3 {
-    margin-top: 0;
   }
 
   @media (min-width: 768px) {
@@ -113,13 +104,6 @@
     margin-bottom: 0.75rem;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid #ddd;
-  }
-
-  .hover {
-    position: absolute;
-    background: #fcfcfc;
-    padding: 0.25rem;
-    width: 250px;
   }
 </style>
 
