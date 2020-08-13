@@ -6,7 +6,7 @@
   :global(h1) {
     font-style: italic;
   }
-  .conainter {
+  .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 1rem;
@@ -22,6 +22,6 @@
   <link rel="stylesheet" href="{settings.locations.assets.replace('./public', '')}style.css" />
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>
-<div class="conainter">
+<div class="container">
   {@html routeHTML}
 </div>

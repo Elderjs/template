@@ -130,7 +130,7 @@
     <strong>Props</strong>
     :
     {#each hook.props as prop}
-      <div class="code" data-balloon-length="xlarge" data-balloon-pos="up" aria-label={hookEntityDefinitions[prop]}>
+      <div class="code" data-balloon-length="medium" data-balloon-pos="up" aria-label={hookEntityDefinitions[prop]}>
         {prop}
       </div>
     {/each}
@@ -139,7 +139,7 @@
     <strong>Mutable</strong>
     :
     {#each hook.mutable as mutable}
-      <div class="code" data-balloon-length="xlarge" data-balloon-pos="up" aria-label={hookEntityDefinitions[mutable]}>
+      <div class="code" data-balloon-length="medium" data-balloon-pos="up" aria-label={hookEntityDefinitions[mutable]}>
         {mutable}
       </div>
     {/each}
