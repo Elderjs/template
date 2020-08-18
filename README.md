@@ -1,5 +1,7 @@
 # Elder.js Template Project
 
+<img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Node&query=engines.node&url=https%3A%2F%2Fraw.githubusercontent.com%2Felderjs%2Ftemplate%2Fmaster%2Fpackage.json" alt="node version" />
+
 This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps. The template lives at https://github.com/elderjs/template and the Elder.js source is here: https://github.com/elderjs/elderjs
 
 Here is a demo of the template: [https://elderjs.netlify.app/](https://elderjs.netlify.app/)
@@ -26,7 +28,7 @@ npm install # or just yarn
 npm start
 ```
 
-Navigate to [localhost:3000](http://localhost:3000). You should see your app running. 
+Navigate to [localhost:3000](http://localhost:3000). You should see your app running.
 
 
 ### Development:
@@ -53,7 +55,7 @@ Once you have these two terminals open, edit a component file in `src`, save it,
 npm run build
 ```
 
-This will build all of your html into the /public/ folder. 
+This will build all of your html into the /public/ folder.
 
 
 ### What to Expect
