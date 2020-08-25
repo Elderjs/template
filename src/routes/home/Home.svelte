@@ -14,14 +14,24 @@
     border-radius: 2rem;
     margin-bottom: 1rem;
   }
-
   .entries {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 3rem 0;
   }
+
+  @media (min-width: 768px) {
+    .entries {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 3rem 0;
+    }
+    :global(.entries .entry) {
+      margin-right: 1rem;
+    }
+  }
+
   :global(.entry) {
-    margin-right: 1rem;
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 1rem;
@@ -32,12 +42,11 @@
     margin-bottom: 2rem;
   }
 
-  .hydrate {
-    display: grid;
-    grid-template-columns: 80% 20%;
-  }
-  .hydrate .left {
-    margin-right: 1.5rem;
+  @media (min-width: 768px) {
+    .hydrate {
+      display: grid;
+      grid-template-columns: 80% 20%;
+    }
   }
 </style>
 
@@ -119,14 +128,14 @@
     <p>
       The
       <a href="https://svelte.dev/examples#clock">clock</a>
-      on the right is an example of a component that has been hydrated on the client.
+      on the this page is an example of a component that has been hydrated on the client.
     </p>
     <p>This approach makes it easy to build SEO friendly websites with Svelte for interactivity when needed.</p>
+    <p>By default all hydrated components are lazy loaded with an intersection observer.</p>
   </div>
   <div class="right">
     <Clock hydrate-client={{}} />
   </div>
-
 </div>
 
 <h2>The Hook Interface</h2>
