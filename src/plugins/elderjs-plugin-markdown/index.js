@@ -31,7 +31,11 @@ const plugin = {
           const md = fs.readFileSync(file, 'utf-8');
           const { data, content } = grayMatter(md);
 
-          const fileSlug = file.replace('.md', '').split('/').pop();
+          let fileSlug = file.replace('.md', '').split('/').pop();
+
+          if (fileSlug.includes(' ')) {
+            fileSlug = fileSlug.replace(/ /gim, '-');
+          }
 
           if (data.slug) {
             plugin.markdown.push({
