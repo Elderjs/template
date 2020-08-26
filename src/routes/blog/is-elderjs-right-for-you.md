@@ -11,26 +11,25 @@ If you're wondering if Elder.js will support your use case we have 1 good rule t
 
 If you're building a **website**, then Elder.js is a great solution out of the box.
 
-If you're building an "App" you can definitely use Elder.js with hooks (make sure to look at the <a href="/middlewareRequest/">`middlewareRequest`</a> hook) but you may also want to explore <a href="https://sapper.svelte.dev/">Sapper</a> as there are lots of guides on authentication and other common needs for Apps. 
+If you're building an "App" you can definitely use Elder.js with hooks (make sure to look at the <a href="/middleware/">`middleware`</a> hook) but you may also want to explore <a href="https://sapper.svelte.dev/">Sapper</a> as there are lots of guides on authentication and other common needs for Apps.
 
 ## Common Use Cases for Elder.js
 
-The Elder.js project was born out of the system that powers <a href="https://elderguide.com/">ElderGuide.com</a>. When building Elder Guide we searched high and low for a blazing fast static site generator that we could use with Svelte, but couldn't find anything that fit our needs. 
+The Elder.js project was born out of the system that powers <a href="https://elderguide.com/">ElderGuide.com</a>. When building Elder Guide we searched high and low for a blazing fast static site generator that we could use with Svelte, but couldn't find anything that fit our needs.
 
 After 6 months of building a great system, we decided to polish it a bit more and open it up into a project others could use.
 
-
 Today, Elder.js has two main functions: one as a static site generator and the other as `express` middleware where it acts as a Svelte framework that supports server side rendering (SSR) and partial hydration. (You're probably viewing this page on the `express` middleware version.)
 
-All of this said, we highly recommend Elder.js as a tool for building statically generated sites that can be cheaply and securely hosted on S3, Netlify, or Cloudflare. 
+All of this said, we highly recommend Elder.js as a tool for building statically generated sites that can be cheaply and securely hosted on S3, Netlify, or Cloudflare.
 
 These include:
 
-* Flagship SEO websites with 10,000s of pages
-* Blogs and personal websites
-* Portfolio or brochure websites
+- Flagship SEO websites with 10,000s of pages
+- Blogs and personal websites
+- Portfolio or brochure websites
 
-To see static export in action run `npm run build` in your terminal. We think you'll be surprised how fast it builds. :) 
+To see static export in action run `npm run build` in your terminal. We think you'll be surprised how fast it builds. :)
 
 If you are looking to use Elder.js as an `express` middleware make sure to look at the <a href="/middlewareRequest/">`middlewareRequest`</a> hook as it should empower you to do anything you'd need to do with Express.
 
@@ -50,7 +49,7 @@ Because of Elder.js' complex rollup config it needs to follow a pretty specific 
 
 In the interest of being objective, it is worth noting that the 'server' functionality powered by Express like middleware was initially used as a 'previewer' to allow us to see pages of our statically generated site BEFORE waiting for 1,000s of pages to build.
 
-Only later did we realize that others would be interested in the same functionality to build server rendered Svelte apps. 
+Only later did we realize that others would be interested in the same functionality to build server rendered Svelte apps.
 
 **No Live Reload / HMR support (Yet)**
 
