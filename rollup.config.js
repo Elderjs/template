@@ -38,23 +38,6 @@ const preprocess = sveltePreprocess({
 // clear out components so there are no conflicts due to hashing.
 del.sync([`${ssrComponents}*`, `${clientComponents}*`]);
 
-// TODO: this should happen on every change. Need to add to a single one of the configs.
-// copy assets folder to public destination
-glob.sync(path.resolve(process.cwd(), locations.srcFolder, './assets/**/*')).forEach((file) => {
-  // Remove base folder structure and split to array
-  const filePath = file.replace(process.cwd() + '/src/assets/', '').split('/');
-  // Check if there is a file name in the last element
-  const fileName = filePath[filePath.length - 1].indexOf('.') !== -1 ? filePath[filePath.length - 1] : false;
-
-  // Create folder structure without filename
-  fs.ensureDirSync(
-    path.resolve(process.cwd(), locations.assets, fileName ? filePath.slice(0, -1).join('/') : filePath.join('/')),
-  );
-
-  // Only write the file if it has an extension
-  if (fileName) fs.copyFileSync(file, path.resolve(process.cwd(), locations.assets, filePath.join('/')));
-});
-
 // Add ElderJs Peer deps to public if they exist.
 const elderJsPeerDeps = [
   ['./node_modules/intersection-observer/intersection-observer.js', 'intersectionObserverPoly'],
