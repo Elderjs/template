@@ -95,65 +95,70 @@ const layouts = glob.sync('./src/layouts/*.svelte').reduce((out, cv) => {
 
 if (production) {
   // production build does bundle splitting, minification, and babel
-  configs = [
-    ...configs,
-    ...templates,
-    ...layouts,
-    createBrowserConfig({
-      input: ['src/components/*/*.svelte'],
-      output: {
-        dir: clientComponents,
-        entryFileNames: 'entry[name]-[hash].js',
-        sourcemap: !production,
-        format: 'system',
-      },
-      multiInputConfig: multiInput({
-        relative: 'src/components/',
-        transformOutputPath: (output, input) => `${path.basename(output)}`,
-      }),
-    }),
-    createSSRConfig({
-      input: ['src/components/*/*.svelte'],
-      output: {
-        dir: ssrComponents,
-        format: 'cjs',
-        exports: 'auto',
-      },
-      multiInputConfig: multiInput({
-        relative: 'src/components/',
-        transformOutputPath: (output, input) => `${path.basename(output)}`,
-      }),
-    }),
-  ];
-} else {
-  // watch/dev build bundles each component individually for faster reload times during dev.
-  const sharedComponents = glob.sync(path.resolve(__dirname, './src/components/*/*.svelte')).reduce((out, cv) => {
-    const file = cv.replace(`${__dirname}/`, '');
-    // console.log(file, cv);;
-    out.push(
+  configs = [...configs, ...templates, ...layouts];
+  if (fs.existsSync(path.resolve(`./src/components/`), { encoding: 'utf-8' })) {
+    configs.push(
       createBrowserConfig({
-        input: file,
+        input: ['src/components/*/*.svelte'],
         output: {
           dir: clientComponents,
-          entryFileNames: 'entry[name].js',
+          entryFileNames: 'entry[name]-[hash].js',
           sourcemap: !production,
           format: 'system',
         },
+        multiInputConfig: multiInput({
+          relative: 'src/components/',
+          transformOutputPath: (output, input) => `${path.basename(output)}`,
+        }),
       }),
     );
-    out.push(
+    configs.push(
       createSSRConfig({
-        input: file,
+        input: ['src/components/*/*.svelte'],
         output: {
           dir: ssrComponents,
           format: 'cjs',
           exports: 'auto',
         },
+        multiInputConfig: multiInput({
+          relative: 'src/components/',
+          transformOutputPath: (output, input) => `${path.basename(output)}`,
+        }),
       }),
     );
+  }
+} else {
+  // watch/dev build bundles each component individually for faster reload times during dev.
+  let sharedComponents = [];
+  if (fs.existsSync(path.resolve(`./src/components/`), { encoding: 'utf-8' })) {
+    sharedComponents = glob.sync(path.resolve(__dirname, './src/components/*/*.svelte')).reduce((out, cv) => {
+      const file = cv.replace(`${__dirname}/`, '');
+      // console.log(file, cv);;
+      out.push(
+        createBrowserConfig({
+          input: file,
+          output: {
+            dir: clientComponents,
+            entryFileNames: 'entry[name].js',
+            sourcemap: !production,
+            format: 'system',
+          },
+        }),
+      );
+      out.push(
+        createSSRConfig({
+          input: file,
+          output: {
+            dir: ssrComponents,
+            format: 'cjs',
+            exports: 'auto',
+          },
+        }),
+      );
 
-    return out;
-  }, []);
+      return out;
+    }, []);
+  }
   configs = [...configs, ...templates, ...layouts, ...sharedComponents];
 }
 
