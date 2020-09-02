@@ -15,7 +15,6 @@ npx degit Elderjs/template elderjs-app
 cd elderjs-app
 ```
 
-
 ### Install the dependencies:
 
 ```bash
@@ -29,7 +28,6 @@ npm start
 ```
 
 Navigate to [localhost:3000](http://localhost:3000). You should see your app running.
-
 
 ### Development:
 
@@ -57,9 +55,8 @@ npm run build
 
 This will build all of your html into the /public/ folder.
 
-
 ### What to Expect
 
-This template is designed to be part demo, part tutorial. We hope you enjoy if you hit snags please create a GitHub issue. :)
-
-<img width="1452" alt="image" src="https://user-images.githubusercontent.com/3580879/89454786-358ba380-d72f-11ea-975a-1c0a6aa5a37e.png">
+- Nodemon is watching your files for changes. It will restart when it needs to.
+- Rollup is watching your files for changes. It will restart when it needs to.
+- If your `elder.config.js` has `@elderjs/browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
