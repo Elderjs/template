@@ -27,14 +27,19 @@ const hooks = [
       // copy assets folder to public destination
       glob.sync(path.resolve(process.cwd(), settings.locations.srcFolder, './assets/**/*')).forEach((file) => {
         const parsed = path.parse(file);
-
         // Only write the file/folder structure if it has an extension
         if (parsed.ext && parsed.ext.length > 0) {
-          const relDirToAssets = file.replace(parsed.dir, '.');
-          const p = path.parse(path.resolve(process.cwd(), settings.locations.assets, relDirToAssets));
+          const relativeToAssetsArray = parsed.dir.split('assets');
+          relativeToAssetsArray.shift();
+
+          const relativeToAssetsFolder = `.${relativeToAssetsArray.join()}/`;
+          const relativeToAssets = `${relativeToAssetsFolder}${parsed.base}`;
+          const p = path.parse(path.resolve(process.cwd(), settings.locations.assets, relativeToAssetsFolder));
           fs.ensureDirSync(p.dir);
-          fs.ensureDirSync(parsed.dir);
-          fs.copyFileSync(file, path.resolve(process.cwd(), settings.locations.assets, relDirToAssets));
+          fs.outputFileSync(
+            path.resolve(process.cwd(), settings.locations.assets, relativeToAssets),
+            fs.readFileSync(file),
+          );
         }
       });
     },
