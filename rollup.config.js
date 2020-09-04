@@ -8,7 +8,6 @@ const css = require('rollup-plugin-css-only');
 const multiInput = require('rollup-plugin-multi-input').default;
 const externalGlobals = require('rollup-plugin-external-globals');
 const replace = require('@rollup/plugin-replace');
-const sveltePreprocess = require('svelte-preprocess');
 const json = require('@rollup/plugin-json');
 const glob = require('glob');
 const path = require('path');
@@ -16,6 +15,7 @@ const fs = require('fs-extra');
 const del = require('del');
 
 const { getElderConfig, partialHydration } = require('@elderjs/elderjs');
+const svelteConfig = require('./svelte.config');
 
 const { locations } = getElderConfig();
 const { ssrComponents, clientComponents } = locations.svelte;
@@ -28,12 +28,6 @@ console.log(
 );
 
 let configs = [];
-
-const preprocess = sveltePreprocess({
-  postcss: {
-    plugins: [require('autoprefixer')],
-  },
-});
 
 // clear out components so there are no conflicts due to hashing.
 del.sync([`${ssrComponents}*`, `${clientComponents}*`]);
@@ -175,12 +169,11 @@ function createBrowserConfig({ input, output, multiInputConfig }) {
       }),
       json(),
       svelte({
+        ...svelteConfig,
         dev: !production,
         immutable: true,
         hydratable: true,
         css: false,
-        preprocess,
-        // emitCss: true,
       }),
       externalGlobals({
         systemjs: 'System',
@@ -225,12 +218,13 @@ function createSSRConfig({ input, output, multiInputConfig = false }) {
       }),
       json(),
       svelte({
+        ...svelteConfig,
         dev: !production,
         hydratable: true,
         generate: 'ssr',
         css: true,
         extensions: '.svelte',
-        preprocess: [preprocess, partialHydration],
+        preprocess: [...svelteConfig.preprocess, partialHydration],
       }),
 
       nodeResolve({
