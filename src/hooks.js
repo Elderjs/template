@@ -30,8 +30,10 @@ const hooks = [
 
         // Only write the file/folder structure if it has an extension
         if (parsed.ext && parsed.ext.length > 0) {
-          fs.ensureDirSync(parsed.dir);
           const relDirToAssets = file.replace(parsed.dir, '.');
+          const p = path.parse(path.resolve(process.cwd(), settings.locations.assets, relDirToAssets));
+          fs.ensureDirSync(p.dir);
+          fs.ensureDirSync(parsed.dir);
           fs.copyFileSync(file, path.resolve(process.cwd(), settings.locations.assets, relDirToAssets));
         }
       });
