@@ -1,5 +1,6 @@
 <script>
   export let routeHTML, settings;
+  var assets_dir = settings.locations.assets.replace(settings.locations.public, '/');
 </script>
 
 <style>
@@ -19,7 +20,7 @@
 </style>
 
 <svelte:head>
-  <link rel="stylesheet" href="{settings.locations.assets.replace('./public', '')}style.css" />
+  <link rel="stylesheet" href="{assets_dir}style.css" />
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>
 <div class="container">
