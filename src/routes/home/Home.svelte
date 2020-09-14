@@ -2,8 +2,6 @@
   import HookList from '../../components/HookList/HookList.svelte';
   import BlogTeaser from '../../components/BlogTeaser/BlogTeaser.svelte';
   import Clock from '../../components/Clock/Clock.svelte';
-import { each } from 'svelte/internal';
-import { stringify } from 'querystring';
   export let data, link;
 
   const hooks = data.hookInterface.map((hook) => ({ ...hook, link: link.hooks({ slug: hook.hook }) }));
