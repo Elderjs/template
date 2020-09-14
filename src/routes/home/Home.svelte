@@ -2,6 +2,8 @@
   import HookList from '../../components/HookList/HookList.svelte';
   import BlogTeaser from '../../components/BlogTeaser/BlogTeaser.svelte';
   import Clock from '../../components/Clock/Clock.svelte';
+import { each } from 'svelte/internal';
+import { stringify } from 'querystring';
   export let data, link;
 
   const hooks = data.hookInterface.map((hook) => ({ ...hook, link: link.hooks({ slug: hook.hook }) }));
@@ -53,6 +55,20 @@
 <svelte:head>
   <title>Elder.js Template: Home</title>
 </svelte:head>
+
+{#if data.testingHooks}
+<div class="banner">
+  <p>Testing hooks worked</p>
+  {#if data.cpus}
+    <p>If you use Elder.js to build your site, it will span all {data.cpus.lenght} cpus listed below:</p>
+    <ol>
+    {#each data.cpus as cpu}
+      <li>{cpu.model}</li>
+    {/each}
+    </ol>
+  {/if}
+</div>
+{/if}
 
 <div class="banner">
   <h1>Hello World: Welcome to Elder.js!</h1>

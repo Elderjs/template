@@ -10,6 +10,22 @@ async function parseMarkdown(markdown) {
   return result.toString();
 }
 
+/**
+ * This is a very quickly written markdown plugin. An official plugin will be coming soon.
+ * 1. This plugin parses all of the markdown files, generates slugs for them, and adds the parsed
+ *    markdown to the data object using the 'bootstrap' hook.
+ * 2. Later it takes each encountered markdown file and adds a new 'request' object on the `allRequests` hook.
+ *    This is why 'all' in the /routes/blog/route.js returns an empty array. It is populated by the plugin.
+ * 3. Instead of adding frontmatter on the 'data' function in the /routes/blog/route.js the plugin is adding
+ *    frontmatter data to the 'data' object here.
+ *
+ *
+ * This plugin is intended to be illustrative of how hooks can be used to accomplish most things that you'd see in a route.js
+ * and how this functionality could be shared across routes or the entire site.
+ *
+ *
+ */
+
 const plugin = {
   name: 'elderjs-plugin-markdown',
   description:
@@ -68,6 +84,15 @@ const plugin = {
         return {
           data: { ...data, markdown: plugin.markdown },
         };
+
+        // Learning Note:
+        // the bootstrap hook is run before each of the 'all' /routes/[routeName]/route.js are run.
+        // Open the /routes/home/route.js, replace the 'all' function with this one and restart the server:
+        // all: ({ data }) => {
+        //   console.log(data);
+        //   return [{ slug: '/' }];
+        // },
+        // You should see all of your parsed markdown files now live on the data object.
       },
     },
     {
@@ -79,6 +104,13 @@ const plugin = {
         return {
           allRequests: [...allRequests, ...plugin.requests],
         };
+
+        // Learning Note:
+        // If you look at the /routes/blog/route.js you'll see that it is returning an empty 'all' array.
+        // The reason for this is that this plugin is adding all of the collected markdown 'request' objects to the 'allRequests'
+        // array here.
+
+        // In the init() function above, look for 'plugin.requests.push' and you'll see these 'request' objects being collected.
       },
     },
     {
@@ -101,6 +133,12 @@ const plugin = {
             };
           }
         }
+
+        // Learning Note:
+        // This function is adding frontmatter and route specific HTML to the 'data' object for a request.
+        // This means when you visit '/getting-started/', the object received within the 'Blog.svelte' file under 'export let data;' will
+        // have the HTML, frontmatter, and any other data passed in.
+        // Navigate over to Blog.svelte and check it out.
       },
     },
   ],
