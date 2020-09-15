@@ -1,5 +1,5 @@
 <script>
-  export let routeHTML, settings;
+  export let routeHtml, settings;
   const assetDir = settings.locations.assets.replace(settings.locations.public, '/');
 </script>
 
@@ -24,5 +24,5 @@
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>
 <div class="container">
-  {@html routeHTML}
+  {@html routeHtml}
 </div>

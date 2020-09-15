@@ -24,7 +24,7 @@ const hooks = [
   //   hook: 'html',
   //   name: 'compressHtml',
   //   description: "Uses regex to compress html. This is a big no-no, but let's give it a whirl.",
-  //   priority: 100, // last please :D
+  //   priority: 1, // last please :D
   //   run: async ({ htmlString }) => {
   //     // this function takes the 'htmlString' prop, compresses it with Regex, then returns it.
   //     return {

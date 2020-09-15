@@ -24,7 +24,7 @@ Each of these 3 routes are designed to showcase something different.
 
 Once you've explored the templates above, it is worth looking a bit at how the hooks work.
 
-Open up the `./src/hooks.ts` file and look at the hooks this project uses.
+Open up the `./src/hooks.js` file and look at the hooks this project uses.
 
 You'll see there is just one hook that is commented out.
 
@@ -34,7 +34,7 @@ In plain english, this hook takes the `htmlString`, modifies it (compresses it),
 
 Now that you see the power of hooks, let's have you add your first hook which illustrates how you'd add analytics code to every page of your site.
 
-Copy and paste the hook below into your `hooks.ts` file.
+Copy and paste the hook below into your `hooks.js` file.
 
 ```javascript
   {
@@ -71,7 +71,7 @@ In building Elder.js we found that if anything can be mutated at anytime, a syst
 
 The 'hookInterface' is designed to solve that problem. While you can explore all of the hooks on the homepage, before you go try adding a malicious hook that is designed to corrupt important data during page load.
 
-Add the hook below to your `hooks.ts` file and reload this page:
+Add the hook below to your `hooks.js` file and reload this page:
 
 ```javascript
 {
@@ -100,9 +100,9 @@ If you're interested in exploring hooks more check out the full <a href="https:/
 
 Shortcodes a great way to customize otherwise static content. They are especially useful when using a CMS or external content store. The most common use cases include:
 
-- 1. You need a placeholder for dynamic content that isn't available when the static content is written.
-- 2. You want a future proof way of adding 'design flair' to your site.
-- 3. When you need a dynamic data point that changes often and don't want to go back and update it each time it changes.
+1. You need a placeholder for dynamic content that isn't available when the static content is written.
+1. You want a future proof way of adding 'design flair' to your site.
+1. When you need a dynamic data point that changes often and don't want to go back and update it each time it changes.
 
 Here is an example of their power:
 
@@ -139,6 +139,8 @@ Project Root
 | -- src
 | -- | -- build.js
 | -- | -- server.js
+| -- | -- hooks.js
+| -- | -- shortcodes.js
 | -- helpers
 | -- | -- index.js
 | -- | -- ...
