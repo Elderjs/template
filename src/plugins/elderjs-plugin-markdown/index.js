@@ -74,6 +74,20 @@ const plugin = {
     return plugin;
   },
   config: {},
+  shortcodes: [
+    {
+      shortcode: 'box',
+      run: async ({ content, props, plugin }) => {
+        return {
+          html: `<div class="box ${props.class}">${content}</div>`, // this is what the shortcode is replaced with.
+          css: '.test{}',
+          js: '<script>var test = true;</script>',
+          head: '<meta test="true"/>',
+        };
+      },
+    },
+  ],
+
   hooks: [
     {
       hook: 'bootstrap',

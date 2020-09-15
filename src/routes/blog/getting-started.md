@@ -96,6 +96,35 @@ Essentially only properties that are able to be mutated on a hook, will be mutat
 
 If you're interested in exploring hooks more check out the full <a href="https://elderguide.com/tech/elderjs/">Elder.js documentation on ElderGuide</a>.
 
+## A Brief Look At Shortcodes
+
+Shortcodes a great way to customize otherwise static content. They are especially useful when using a CMS or external content store. The most common use cases include:
+
+- 1. You need a placeholder for dynamic content that isn't available when the static content is written.
+- 2. You want a future proof way of adding 'design flair' to your site.
+- 3. When you need a dynamic data point that changes often and don't want to go back and update it each time it changes.
+
+Here is an example of their power:
+
+> This site has **{{numberOfPages /}}** pages on it.
+
+If you add another page to this site, you'll see that the number of pages above adjusts accordingly. This dynamic ability is powered via a shortcode which you can see in `./src/shortcodes.js`.
+
+Usually this sort of customization takes a ton of preprocessing, parsing, etc, but Elder.js handles it all for you. Simply define a shortcode and a function that returns what you want it to be replaced with and Elder.js will handle the rest.
+
+**Learning Opportunities:**
+
+1. Try using the 'box' shortcode to see how to add design flair.
+1. Think about how you could use a shortcode to fetch data from an external API and how that would add major flexibility to your static content.
+1. Try adding a "Clock" Svelte component to this page. (Details in the `./src/shortcodes.js`)
+
+**Out of the Box Usecases**
+
+1. Pulling in your latest Tweets or replies to one of your tweets.
+1. You run your own ad platform for your site. You can use a shortcode that hits an external API allowing you render your ads on the server.
+1. You want to embed arbitrary JS on the page (event tracking or something) but only when a shortcode is present. (totally doable)
+1. You need to add `ld+json` to your head for a specific page, but don't have it wired into the template. You could use a shortcode to do so.
+
 ## Elder.js Project Structure
 
 Under the hood Elder.js does quite a bit of magic based on the file structure below but more importantly the `rollup.config.js` is setup to match this file structure. Since rollup handles all of the bundling of our Svelte components, we recommend you follow this structure unless you like tinkering with bundlers.

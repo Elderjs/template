@@ -2,9 +2,9 @@
   import HookList from '../../components/HookList/HookList.svelte';
   import BlogTeaser from '../../components/BlogTeaser/BlogTeaser.svelte';
   import Clock from '../../components/Clock/Clock.svelte';
-  export let data, link;
+  export let data, helpers;
 
-  const hooks = data.hookInterface.map((hook) => ({ ...hook, link: link.hooks({ slug: hook.hook }) }));
+  const hooks = data.hookInterface.map((hook) => ({ ...hook, link: helpers.permalinks.hooks({ slug: hook.hook }) }));
 </script>
 
 <style>
@@ -88,7 +88,7 @@
 <div class="blog">
   <div class="entries">
     {#each data.markdown as blog}
-      <BlogTeaser {blog} {link} />
+      <BlogTeaser {blog} {helpers} />
     {/each}
   </div>
 </div>
@@ -106,7 +106,7 @@
     <li>Home - The page you are on.</li>
     <li>
       Blog - Linked from above, but you can also see a blog post by checking out:
-      <a href={link.blog({ slug: 'getting-started' })}>'Getting Started'</a>
+      <a href={helpers.permalinks.blog({ slug: 'getting-started' })}>'Getting Started'</a>
       .
     </li>
     <li>Below we've also built a dedicated page for each one of the hooks Elder.js offers under the hood.</li>

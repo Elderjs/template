@@ -18,7 +18,7 @@
     "node": ">= 12.0.0"
   },
   "dependencies": {
-    "@elderjs/elderjs": "^0.1.3",
+    "@elderjs/elderjs": "file:../elderjs",
     "@elderjs/browser-reload": "0.0.8",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
