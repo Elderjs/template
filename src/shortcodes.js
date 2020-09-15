@@ -33,28 +33,19 @@ module.exports = [
 
   /**
    *
-   * Usecases for shortcodes:
-   *
-   * If you're new to shortcodes you may be thinking: When would I use these?
-   *
-   * Shortcodes are best used when:
-   *
-   * 1. You need a placeholder for dynamic content that isn't available when the static content is written.
-   * 2. You want a future proof way of adding 'design flare' to your site.
-   * 3. When you need a dynamic data point that changes often and don't want to go back and update it each time it changes.
-   *
-   * One of the best examples is the following scenario:
+   * A common issue with static content is that someone will need to go back and update that content.
    * * Imagine you have your content in a CMS such as WordPress, Contentful, Prismic, or even a markdown file.
-   * * Within this content you need to know the number of pages on your site... but it changes all of the time.
+   * * Within this content some "decision maker" has decided that you need to display the number of pages on your site... and it always has to be accurate.
    *
-   * Usually pulling this off would require you to put a placeholder like {{numberOfPages /}} and then preprocessing the content before rendering it.
+   * Usually pulling this off would require you to put a placeholder like {{numberOfPages /}} and then preprocessing the content, counting the number of pages, and then rendering it.
    *
    * With Elder.js shortcodes, all the preprocessing is done for you, you just need to decide what you want to replace it with.
    *
    * Below is code for the usecase above.
    *
-   * But it is important to note, even if you wanted {{latestInstagramPhoto /}} to be shown, the same approach would apply. Just use something like
+   * It is important to note, even if you wanted {{latestInstagramPhoto /}} to be shown, the same approach would apply. Just use something like
    * `node-fetch` to hit Instagram's API and specify what html, css, js you'd like to add to the page.
+   *
    * */
 
   {
