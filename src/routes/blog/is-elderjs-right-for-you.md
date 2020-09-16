@@ -39,7 +39,9 @@ If you are looking to use Elder.js as an `express` middleware make sure to look 
 
 To be candid, Elder.js's biggest drawback is it's very complex Rollup configuration. Hours and hours of tinkering have gone into it and it's the best system we could come up with that works.
 
-Most of this complexity comes from the way Elder.js does partial hydration as it requires Svelte components to be bundled in two very specific manners at the same time. Currently there is no webpack or other bundler support.
+As of Elder.js v1.0.0 this config was internalized to Elder.js to help internalize much of the complexity.
+
+That said, this means that if you need a different rollup config than the standard, you'll need to do some hacking yourself.
 
 **A Very Strict Folder Structure**
 

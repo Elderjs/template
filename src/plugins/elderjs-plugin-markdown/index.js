@@ -39,7 +39,7 @@ const plugin = {
 
     if (config && Array.isArray(config.routes) && config.routes.length > 0) {
       for (const route of config.routes) {
-        const mdsInRoute = path.resolve(process.cwd(), settings.locations.srcFolder, './routes/', route);
+        const mdsInRoute = path.resolve(settings.srcDir, './routes/', route);
         // console.log(`${mdsInRoute}/*.md`);
         const mdFiles = glob.sync(`${mdsInRoute}/*.md`);
 

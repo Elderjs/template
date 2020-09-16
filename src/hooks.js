@@ -46,7 +46,7 @@ const hooks = [
       // It is just executed on the 'bootstrap' hook which runs once when Elder.js is starting.
 
       // copy assets folder to public destination
-      glob.sync(path.resolve(process.cwd(), settings.locations.srcFolder, './assets/**/*')).forEach((file) => {
+      glob.sync(path.resolve(settings.rootDir, './assets/**/*')).forEach((file) => {
         const parsed = path.parse(file);
         // Only write the file/folder structure if it has an extension
         if (parsed.ext && parsed.ext.length > 0) {
@@ -54,11 +54,10 @@ const hooks = [
           relativeToAssetsArray.shift();
 
           const relativeToAssetsFolder = `.${relativeToAssetsArray.join()}/`;
-          const relativeToAssets = `${relativeToAssetsFolder}${parsed.base}`;
-          const p = path.parse(path.resolve(process.cwd(), settings.locations.assets, relativeToAssetsFolder));
+          const p = path.parse(path.resolve(settings.distDir, relativeToAssetsFolder));
           fs.ensureDirSync(p.dir);
           fs.outputFileSync(
-            path.resolve(process.cwd(), settings.locations.assets, relativeToAssets),
+            path.resolve(settings.distDir, `${relativeToAssetsFolder}${parsed.base}`),
             fs.readFileSync(file),
           );
         }

@@ -1,17 +1,11 @@
 module.exports = {
+  siteUrl: '',
+  srcDir: 'src',
+  distDir: 'public',
+  rootDir: process.cwd(),
+  build: {},
   server: {
     prefix: '',
-  },
-  build: {},
-  locations: {
-    assets: './public/dist/static/',
-    public: './public/',
-    svelte: {
-      ssrComponents: './___ELDER___/compiled/',
-      clientComponents: './public/dist/svelte/',
-    },
-    systemJs: '/dist/static/s.min.js',
-    intersectionObserverPoly: '/dist/static/intersection-observer.js',
   },
   debug: {
     stacks: false,
@@ -29,4 +23,5 @@ module.exports = {
     },
     '@elderjs/browser-reload': {}, // this reloads your browser when nodemon restarts your server.
   },
+  shortcodes: { closePattern: '}}', openPattern: '{{' },
 };

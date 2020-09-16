@@ -26,9 +26,9 @@ Once you've explored the templates above, it is worth looking a bit at how the h
 
 Open up the `./src/hooks.js` file and look at the hooks this project uses.
 
-You'll see there is just one hook that is commented out.
+You'll see there are a few hooks in there.
 
-If you uncomment that hook, and reload this page, you'll see that the html is now compressed... but the code blocks are broken. (they always say don't compress html with regex!).
+If you uncomment the hook with the name of `compressHtml` and reload this page, you'll see that the html is now compressed... but the code blocks are broken. (they always say don't compress html with regex!).
 
 In plain english, this hook takes the `htmlString`, modifies it (compresses it), and returns it.
 
@@ -62,6 +62,10 @@ Under the hood, Elder.js uses stacks to predictably manage in what order strings
 In this hook we're just adding our analytics code at a priority of 100 (last).
 
 If stacks seem foreign, just remember they are a list of strings with some meta data.
+
+## Copying of Assets
+
+Another hook that you'll see is one that copies anything in your `./assets/` to the `distDir` defined in your `elder.config.js` (which is`./public/` folder by default in this project).
 
 ## Hooks In Depth:
 
@@ -133,7 +137,6 @@ Under the hood Elder.js does quite a bit of magic based on the file structure be
 Project Root
 | elder.config.js
 | package.json
-| tsconfig.json (typescript only)
 | rollup.config.js
 | ... (other common stuff, .gitignore, svelte.config.js... etc)
 | -- src
@@ -144,8 +147,6 @@ Project Root
 | -- helpers
 | -- | -- index.js
 | -- | -- ...
-| -- assets
-| -- | -- items to be copied to public at build.
 | -- layouts
 | -- | -- Layout.svelte
 | -- routes
@@ -160,7 +161,7 @@ Project Root
 | -- | -- | -- Contact.svelte
 
 
-Typescript Projects:
-| -- build
-| -- | ... copy of your compiled ts from the src folder here.
+On this Project:
+| -- assets
+| -- | -- items to be copied to the 'distDir' defined in your 'elder.config.js'. See hooks.js.
 ```
