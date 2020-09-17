@@ -109,21 +109,28 @@
       <a href={helpers.permalinks.blog({ slug: 'getting-started' })}>'Getting Started'</a>
       .
     </li>
-    <li>Below we've also built a dedicated page for each one of the hooks Elder.js offers under the hood.</li>
+    <li>Hooks - These are how you customize Elder.js. Details are below and we've used the <span class="code">hookInterface</span> to build out dedicated pages 
+      for each hook as well.</li>
   </ul>
 
   <p>
     The goal in showing off these 3 routes is to give you enough of an example to see how a site is built with Elder.js
     but one that isn't too complex to overwhelm you.
   </p>
+  <h3>Development Enviroment:</h3>
+  <p>
+    If you ran <span class="code">npm start</span> to see this page, we recommend you stop that command instead open two terminals and run:
+  </p>
+  <ol>
+    <li><span class="code">npm run dev:server</span> - This uses nodemon to restart the development server when files change.</li>
+    <li><span class="code">npm run dev:rollup</span> - This uses rollup to recompile your Svelte templates as you change them.</li>
+  </ol>
 
   <p>
     <strong>Note:</strong>
-    Chances are you are using
-    <code>npm run dev:server</code>
-    to preview this. If so, make sure you also check out
+  Make sure you also check out
     <code>npm run build</code>
-    which will statically generate this same site.
+    which will statically generate this same site so it can be deployed with a static site host such as Netlify, Cloudflare Workers, Vercel, or S3. 
   </p>
 
 </div>
