@@ -1,5 +1,5 @@
 <script>
-  export let routeHtml, settings;
+  export let templateHtml, settings;
 </script>
 
 <style>
@@ -23,5 +23,5 @@
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>
 <div class="container">
-  {@html routeHtml}
+  {@html templateHtml}
 </div>
