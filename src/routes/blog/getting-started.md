@@ -10,15 +10,16 @@ Sweet! So you've got the Elder.js starter template up and running. What's next?
 
 Let's take a look:
 
-## 3 Routes To Explore
+## 4 Routes To Explore
 
 This project is structured to follow the required Elder.js folder structure which you can see below, but in short you've got 3 routes in the `./src/routes/` folder. They are "hooks", "home", and "blog."
 
-Each of these 3 routes are designed to showcase something different.
+Each of these 4 routes are designed to showcase something different.
 
+- [Simple](/simple/) - The a simple route with an overview of how routing works in Elder.js.
 - Home - This is the simple route to illustrate the basic concepts. Open up the `./src/routes/home/route.js` file and look at how the `all` and `permalink` functions work. Then look at the `Home.svelte` to see what is going on there.
 - Blog - This route is powered almost exclusively by a plugin which you can find in `./src/plugins/elderjs-plugin/markdown/`. You can find this page's markdown at `./src/routes/blog/getting-started.md`. Try duplicating one of the existing markdown files and renaming it. You'll see that the homepage will change next time you build or reload the server.
-- Hooks - The hooks route illustrates how to add data to a page and the data flow. In the `./src/routes/hooks/route.js` file you'll see we're importing the hookInterface and then building a page for each hook using the `all` and `permalink` functions. Next open up the `./src/routes/hooks/data.js` and the `./src/routes/hooks/Hooks.svelte` to see how data is passed from request --> data --> Svelte.
+- Hooks - The hooks route illustrates how to add data to a page and the data flow. In the `./src/routes/hooks/route.js` file you'll see we're importing the hookInterface and then building a page for each hook using the `all` and `permalink` functions. Next open up the `./src/routes/hooks/route.js` and the `./src/routes/hooks/Hooks.svelte` to see how data is passed from request --> data --> Svelte.
 
 ## Writing Your First Hook:
 

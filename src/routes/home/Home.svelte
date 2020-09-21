@@ -97,12 +97,13 @@
 
   <h2>About This Template</h2>
   <p>
-    This example project is made up of 3 routes, you can find them by looking within the
+    This example project is made up of 4 routes, you can find them by looking within the
     <span class="code">./src/routes/</span>
     folder. They are:
   </p>
 
   <ul>
+    <li><a href={helpers.permalinks.simple({slug: 'simple'})}>Simple</a> - A barebones route.</li>
     <li>Home - The page you are on.</li>
     <li>
       Blog - Linked from above, but you can also see a blog post by checking out:

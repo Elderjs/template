@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: '',
+  origin: '', // TODO: update this.
   srcDir: 'src',
   distDir: 'public',
   rootDir: process.cwd(),
