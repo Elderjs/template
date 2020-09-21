@@ -20,7 +20,7 @@ module.exports = {
       <p>Then when you visit <span class="code">/blog/simple/</span> that route would receive a <span class="code">request</span> object of 
       <span class="code">{ slug: "simple" }</span>.
 
-      <p>While this approach works, a huge downside is that it forces a static site generator to crawl all of the links on a site to know all of the requests objects.</p>
+      <p>While this approach works, a huge downside is that it forces a static site generator to crawl all of the links on a site to know all of the request objects.</p>
       <p>Since Elder.js is built for speed and crawling is expensive, Elder.js asks you to define all of your <span class="code">request</span> objects in your <span class="code">all()</span> function.</p>
       <p>Once it has your requests, it runs them through the <span class="code">permalink()</span> function to can build an entire map of your site so we don't have to crawl it but can generate it on the fly.</p>
       <h3>Learning Exercise: </h3>
