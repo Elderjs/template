@@ -40,7 +40,7 @@ const hooks = [
     hook: 'bootstrap',
     name: 'copyAssetsToPublic',
     description:
-      'Copies /src/assets/ to the assets folder defined in the elder.config.js. This function helps support the live reload process.',
+      'Copies ./assets/ to the "distDir" defined in the elder.config.js. This function helps support the live reload process.',
     run: ({ settings }) => {
       // note that this function doesn't manipulate any props or return anything.
       // It is just executed on the 'bootstrap' hook which runs once when Elder.js is starting.
