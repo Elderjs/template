@@ -184,7 +184,7 @@
 </p>
 
 <img
-  src="https://elderguide.com/images/elderjs-hook-lifescyle-v3.png"
+  src="https://elderguide.com/images/elderjs-hooks-v100.png"
   alt="Elder.js hook Lifecycle"
   style="max-width:100%; margin:1rem 0;" />
 
