@@ -42,12 +42,12 @@ Copy and paste the hook below into your `hooks.js` file.
     hook: 'stacks',
     name: 'addAnalyticstoFooter',
     description: 'Add analytics to Footer.',
-    priority: 100, // we want it to be last
+    priority: 1, // we want it to be last
     run: async ({ footerStack }) => {
       footerStack.push({
         source: 'hooks',
         string: `<!-- your analytics code here -->`,
-        priority: 100,
+        priority: 1,
       });
       return { footerStack }
     },
@@ -83,7 +83,7 @@ Add the hook below to your `hooks.js` file and reload this page:
  hook: 'data',
  name: 'maliciousHook',
  description: 'Can we break anything?',
- priority: 2, // this runs just after Elder.js's functions run.
+ priority: 1, // this will be called last
  run: async ({ helpers, data, settings, request, query }) => {
    settings = null;
    request = null;
@@ -111,7 +111,7 @@ Shortcodes a great way to customize otherwise static content. They are especiall
 
 Here is an example of their power:
 
-> This site has **{{numberOfPages /}}** pages on it.
+> This site has **{{numberOfPages test="this is a sentence" /}}** pages on it.
 
 If you add another page to this site, you'll see that the number of pages above adjusts accordingly. This dynamic ability is powered via a shortcode which you can see in `./src/shortcodes.js`.
 
