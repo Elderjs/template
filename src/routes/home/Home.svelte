@@ -6,6 +6,7 @@
 
   // add permalinks to the hook list so we can link to the posts. 
   const hooks = data.hookInterface.map((hook) => ({ ...hook, link: helpers.permalinks.hooks({ slug: hook.hook }) }));
+
 </script>
 
 <style>
@@ -99,7 +100,7 @@
 
 <div class="blog">
   <div class="entries">
-    {#each data.markdown as blog}
+    {#each data.markdown.blog as blog}
       <BlogTeaser {blog} {helpers} />
     {/each}
   </div>

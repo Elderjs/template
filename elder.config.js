@@ -18,7 +18,7 @@ module.exports = {
     // disable: ['elderWriteHtmlFileToPublic'], // this is used to disable internal hooks. Uncommenting this would disabled writing your files on build.
   },
   plugins: {
-    'elderjs-plugin-markdown': {
+    '@elderjs/plugin-markdown': {
       routes: ['blog'],
     },
     '@elderjs/plugin-browser-reload': {
