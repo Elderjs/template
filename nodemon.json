@@ -1,5 +1,5 @@
 {
-  "watch": ["src", "elder.config.js", "___ELDER___"],
+  "watch": ["src", "elder.config.js", "___ELDER___", "assets"],
   "ext": ".ts,.js,.svelte,.md,.css",
   "delay": "500",
   "ignore": [],

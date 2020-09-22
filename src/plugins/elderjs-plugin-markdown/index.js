@@ -11,7 +11,13 @@ async function parseMarkdown(markdown) {
 }
 
 /**
- * This is a very quickly written markdown plugin. An official plugin will be coming soon.
+ * This is a very quickly written markdown plugin. Designed to showcase how to write your own plugin.
+ *
+ * The official markdown plugin can be found here: https://github.com/Elderjs/plugins/tree/master/packages/markdown.
+ *
+ *
+ * Learning Exercises:
+ *
  * 1. This plugin parses all of the markdown files, generates slugs for them, and adds the parsed
  *    markdown to the data object using the 'bootstrap' hook.
  * 2. Later it takes each encountered markdown file and adds a new 'request' object on the `allRequests` hook.
@@ -22,7 +28,6 @@ async function parseMarkdown(markdown) {
  *
  * This plugin is intended to be illustrative of how hooks can be used to accomplish most things that you'd see in a route.js
  * and how this functionality could be shared across routes or the entire site.
- *
  *
  */
 

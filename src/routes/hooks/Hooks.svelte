@@ -1,7 +1,8 @@
 <script>
-  import HookDetail from '../../components/HookDetail/HookDetail.svelte';
+  import HookDetail from '../../components/HookDetail.svelte';
+  import Blog from '../blog/Blog.svelte';
 
-  export let data, helpers;
+  export let data;
 
 </script>
 
@@ -18,7 +19,7 @@
 
 <a href="/">&LeftArrow; Home</a>
 
-<HookDetail hook={data.hook} {helpers} />
+<HookDetail {...data} />
 
 <img
   src="https://elderguide.com/images/elderjs-hook-lifescyle-v3.png"

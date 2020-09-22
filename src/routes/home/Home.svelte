@@ -1,9 +1,10 @@
 <script>
-  import HookList from '../../components/HookList/HookList.svelte';
-  import BlogTeaser from '../../components/BlogTeaser/BlogTeaser.svelte';
-  import Clock from '../../components/Clock/Clock.svelte';
+  import HookDetail from '../../components/HookDetail.svelte';
+  import BlogTeaser from '../../components/BlogTeaser.svelte';
+  import Clock from '../../components/Clock.svelte';
   export let data, helpers;
 
+  // add permalinks to the hook list so we can link to the posts. 
   const hooks = data.hookInterface.map((hook) => ({ ...hook, link: helpers.permalinks.hooks({ slug: hook.hook }) }));
 </script>
 
@@ -46,6 +47,17 @@
     .hydrate {
       display: grid;
       grid-template-columns: 80% 20%;
+    }
+  }
+
+  .hooks {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .hooks {
+      grid-template-columns: 50% 50%;
     }
   }
 </style>
@@ -175,4 +187,10 @@
   alt="Elder.js hook Lifecycle"
   style="max-width:100%; margin:1rem 0;" />
 
-<HookList {hooks} />
+
+<div class="hooks">
+  {#each hooks as hook, i}
+    <HookDetail {hook} {i} hookEntityDefinitions={data.hookEntityDefinitions} />
+  {/each}
+
+</div>

@@ -1,4 +1,4 @@
-const { hookInterface } = require('@elderjs/elderjs');
+const { hookInterface, hookEntityDefinitions } = require('@elderjs/elderjs');
 
 module.exports = {
   all: async () => {
@@ -19,6 +19,6 @@ module.exports = {
     const hook = hookInterface.find((hookDetails) => hookDetails.hook === slug);
 
     // This object returned will be available in the `Hooks.svelte` template by using "export let data;"
-    return { hook };
+    return { hook, hookEntityDefinitions };
   },
 };
