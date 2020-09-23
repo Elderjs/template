@@ -9,7 +9,7 @@ module.exports = {
       title: 'Elder.js Route: An Overview',
       steps: [
         `Step 1: All routes require a route.js and a svelte template. Look at ./src/simple/route.js to follow along.`,
-        `Step 2: We define an 'all()' function that returns an array of each 'request' objects.`,
+        `Step 2: We define an 'all()' function that returns an array of 'request' objects.`,
         `Step 3: We define a permalink function that transforms the 'request' objects from 'all()' into permalinks.`,
         `Step 4: We define a data function that makes data available in your svelte template.`,
       ],
