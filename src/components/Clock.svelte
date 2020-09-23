@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
   let time = new Date();
 

@@ -3,7 +3,6 @@
   import Blog from '../blog/Blog.svelte';
 
   export let data;
-
 </script>
 
 <style>

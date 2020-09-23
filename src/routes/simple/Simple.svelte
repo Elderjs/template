@@ -18,9 +18,9 @@
 <h1>{data.title}</h1>
 
 <ul>
-{#each data.steps as step}
-  <li>{step}</li>
-{/each}
+  {#each data.steps as step}
+    <li>{step}</li>
+  {/each}
 </ul>
 
 {@html data.content}

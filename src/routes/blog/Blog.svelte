@@ -33,7 +33,7 @@
     border-radius: 1rem;
   }
   :global(blockquote:after) {
-    content: ">";
+    content: '>';
     color: #aaa;
     font-size: 30px;
     position: absolute;
@@ -53,9 +53,7 @@
 
 <div class="title">
   <h1>{frontmatter.title}</h1>
-  {#if frontmatter.author}
-    <small>By {frontmatter.author}</small>
-  {/if}
+  {#if frontmatter.author}<small>By {frontmatter.author}</small>{/if}
 </div>
 
 {#if html}
