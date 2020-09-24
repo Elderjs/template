@@ -59,4 +59,4 @@ This will build all of your html into the /public/ folder.
 
 - Nodemon is watching your files for changes. It will restart when it needs to.
 - Rollup is watching your files for changes. It will restart when it needs to.
-- If your `elder.config.js` has `@elderjs/browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
+- If your `elder.config.js` has `@elderjs/plugin-browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
