@@ -6,8 +6,9 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const sirv = require('sirv');
 
-const { Elder } = require('@elderjs/elderjs');
+const { Elder, getConfig } = require('@elderjs/elderjs');
 const elder = new Elder({ context: 'server' });
+const { distDir } = getConfig();
 
 const SERVER_PORT = process.env.SERVER_PORT || 3000;
 
@@ -26,7 +27,7 @@ server.use(bodyParser.urlencoded({ extended: false }), bodyParser.json());
 
 server.use(elder.server);
 
-server.use(sirv('public', { dev: true }));
+server.use(sirv(distDir, { dev: true }));
 
 server.listen(SERVER_PORT, (err) => {
   if (err) {
