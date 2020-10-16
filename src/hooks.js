@@ -51,12 +51,9 @@ const hooks = [
         // Only write the file/folder structure if it has an extension
         if (parsed.ext && parsed.ext.length > 0) {
           const relativeToAssetsFolder = path.relative(path.join(settings.rootDir, './src/assets'), file)
-          const p = path.parse(path.resolve(settings.distDir, relativeToAssetsFolder));
-          fs.ensureDirSync(p.dir);
-          fs.outputFileSync(
-            path.resolve(settings.distDir, `${relativeToAssetsFolder}${parsed.base}`),
-            fs.readFileSync(file),
-          );
+          const outputPath = path.resolve(settings.distDir, relativeToAssetsFolder)
+          fs.ensureDirSync(path.parse(outputPath).dir)
+          fs.outputFileSync(outputPath, fs.readFileSync(file))
         }
       });
     },
