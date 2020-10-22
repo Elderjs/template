@@ -1,6 +1,5 @@
 <script>
   import HookDetail from '../../components/HookDetail.svelte';
-  import Blog from '../blog/Blog.svelte';
 
   export let data;
 </script>
