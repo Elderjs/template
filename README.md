@@ -31,21 +31,14 @@ Navigate to [localhost:3000](http://localhost:3000). You should see your app run
 
 ### Development:
 
-For development, we recommend running two separate terminals. One for the server and the other for rollup.
-
-**Terminal 1**
-
-```bash
-npm run dev:server # `npm start` above starts a server, but doesn't rebuild your Svelte components on change.
-```
-
-**Terminal 2**
+For development, we run two separate tasks using [`concurrently`](https://www.npmjs.com/package/concurrently). One for the server and the other for rollup
+which will rebuild your svelte components on change.
 
 ```bash
-npm run dev:rollup # This rebuilds your svelte components on change.
+npm run dev # This executes `npm run dev:rollup` && `npm run dev:server`
 ```
 
-Once you have these two terminals open, edit a component file in `src`, save it, and reload the page to see your changes.
+Once you have this running, edit a component file in `src`, save it, and reload the page to see your changes.
 
 ### To Build HTML:
 
