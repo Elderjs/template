@@ -20,6 +20,9 @@ module.exports = {
   plugins: {
     '@elderjs/plugin-markdown': {
       routes: ['blog'],
+      slugFormatter: function(blogEntryAbsolutePath, routeAbsolutePath) {
+        return blogEntryAbsolutePath.replace(`${routeAbsolutePath}/`,'').replace('.md','');
+      },
     },
     '@elderjs/plugin-browser-reload': {
       // this reloads your browser when nodemon restarts your server.
