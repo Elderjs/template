@@ -25,7 +25,7 @@ module.exports = {
 
         function transformer(tree, file) {
           file.data.frontmatter = file.data.frontmatter || {};
-          file.data.frontmatter.slug = file.data.path.replace(`${file.data.routePath}/`,'').replace('.md','');
+          file.data.frontmatter.slug = file.data.path.replace(`${file.data.routePath}/`,'').replace('.md','').replace(/ /gim, '-');
 
           console.log(file.data);
         }
