@@ -20,16 +20,16 @@ module.exports = {
   plugins: {
     '@elderjs/plugin-markdown': {
       routes: ['blog'],
-      slugTransformer: function () {
-        return transformer
+      additionalRemarkPlugins: [
+        function () {
+          return transformer
 
-        function transformer(tree, file) {
-          file.data.frontmatter = file.data.frontmatter || {};
-          file.data.frontmatter.slug = file.data.path.replace(`${file.data.routePath}/`,'').replace('.md','').replace(/ /gim, '-');
-
-          console.log(file.data);
+          function transformer(tree, file) {
+            file.data.frontmatter = file.data.frontmatter || {};
+            file.data.frontmatter.slug = file.data.path.replace(`${file.data.routePath}/`,'').replace('.md','').replace(/ /gim, '-');
+          }
         }
-      }
+      ]
     },
     '@elderjs/plugin-browser-reload': {
       // this reloads your browser when nodemon restarts your server.
