@@ -34,7 +34,8 @@
     "sirv": "^1.0.5",
     "svelte": "^3.24.0",
     "svelte-preprocess": "^4.0.9",
-    "systemjs": "^6.5.0"
+    "systemjs": "^6.5.0",
+    "to-vfile": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

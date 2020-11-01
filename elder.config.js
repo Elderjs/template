@@ -20,8 +20,9 @@ module.exports = {
   plugins: {
     '@elderjs/plugin-markdown': {
       routes: ['blog'],
-      slugFormatter: function(blogEntryAbsolutePath, routeAbsolutePath) {
-        return blogEntryAbsolutePath.replace(`${routeAbsolutePath}/`,'').replace('.md','');
+      slugFormatter: function(tree, file) {
+        file.data.frontmatter = file.data.frontmatter || {};
+        file.data.frontmatter.slug = file.basename.replace('.md','');
       },
     },
     '@elderjs/plugin-browser-reload': {
