@@ -19,7 +19,7 @@
     "node": ">= 12.0.0"
   },
   "dependencies": {
-    "@elderjs/elderjs": "^1.1.5",
+    "@elderjs/elderjs": "^1.1.7",
     "@elderjs/plugin-browser-reload": "^0.1.6",
     "@elderjs/plugin-markdown": "^0.1.6",
     "body-parser": "^1.19.0",
@@ -33,8 +33,7 @@
     "polka": "^0.5.2",
     "sirv": "^1.0.5",
     "svelte": "^3.24.0",
-    "svelte-preprocess": "^4.0.9",
-    "systemjs": "^6.5.0"
+    "svelte-preprocess": "^4.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
