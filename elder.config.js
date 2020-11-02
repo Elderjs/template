@@ -21,7 +21,7 @@ module.exports = {
     '@elderjs/plugin-markdown': {
       routes: ['blog'],
       slugFormatter: function(file) {
-        return file.split('blog/')[1].replace('.md','');
+        return file.split('blog/')[1].replace('.md','').replace(/ /gim, '-');;
       },
     },
     '@elderjs/plugin-browser-reload': {
