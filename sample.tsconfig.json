@@ -2,11 +2,9 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "es2020",
-    "module": "commonjs",
     "lib": ["es2020", "DOM"],
     "allowJs": true,
     "outDir": "build",
-    "rootDir": "src",
     "strict": false,
     "esModuleInterop": true,
     "resolveJsonModule": true
