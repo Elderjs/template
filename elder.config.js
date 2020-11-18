@@ -1,5 +1,6 @@
 module.exports = {
   origin: '', // TODO: update this.
+  lang: 'en',
   srcDir: 'src',
   distDir: 'public',
   rootDir: process.cwd(),
