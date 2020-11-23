@@ -60,7 +60,7 @@ In this hook we are manipulating a "stack."
 
 Under the hood, Elder.js uses stacks to predictably manage in what order strings are rendered.
 
-In this hook we're just adding our analytics code at a priority of 100 (last).
+In this hook we're just adding our analytics code at a priority of 1 (last).
 
 If stacks seem foreign, just remember they are a list of strings with some meta data.
 
@@ -103,7 +103,7 @@ If you're interested in exploring hooks more check out the full <a href="https:/
 
 ## A Brief Look At Shortcodes
 
-Shortcodes a great way to customize otherwise static content. They are especially useful when using a CMS or external content store. The most common use cases include:
+Shortcodes are a great way to customize otherwise static content. They are especially useful when using a CMS or external content store. The most common use cases include:
 
 1. You need a placeholder for dynamic content that isn't available when the static content is written.
 1. You want a future proof way of adding 'design flair' to your site.
@@ -132,7 +132,7 @@ Usually this sort of customization takes a ton of preprocessing, parsing, etc, b
 
 ## Elder.js Project Structure
 
-Under the hood Elder.js does quite a bit of magic based on the file structure below but more importantly the `rollup.config.js` is setup to match this file structure. Since rollup handles all of the bundling of our Svelte components, we recommend you follow this structure unless you like tinkering with bundlers.
+Under the hood Elder.js does quite a bit of magic based on the file structure below but more importantly the `rollup.config.js` is setup to match this file structure. Since Rollup handles all of the bundling of our Svelte components, we recommend you follow this structure unless you like tinkering with bundlers.
 
 ```
 Project Root
