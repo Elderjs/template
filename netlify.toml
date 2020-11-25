@@ -3,7 +3,7 @@
   publish = "public/"
 
 [[headers]]
-  for = "/svelte/*"
+  for = "/_elder/*"
   [headers.values]
     cache-control = '''
       public,
