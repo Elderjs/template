@@ -41,11 +41,11 @@ To be candid, Elder.js's biggest drawback is it's very complex Rollup configurat
 
 As of Elder.js v1.0.0 this config was internalized to Elder.js to help internalize much of the complexity.
 
-That said, this means that if you need a different rollup config than the standard, you'll need to do some hacking yourself.
+That said, this means that if you need a different Rollup config than the standard, you'll need to do some hacking yourself.
 
 **A Very Strict Folder Structure**
 
-Because of Elder.js' complex rollup config it needs to follow a pretty specific file structure. This project matches that file structure and you can learn more about it on the <a href="/getting-started/">getting started</a> page.
+Because of Elder.js' complex Rollup config it needs to follow a pretty specific file structure. This project matches that file structure and you can learn more about it on the <a href="/getting-started/">getting started</a> page.
 
 **Express Middleware / Server**
 
