@@ -3,7 +3,7 @@
   publish = "public/"
 
 [[headers]]
-  for = "/_elder/*"
+  for = "/_elderjs/*"
   [headers.values]
     cache-control = '''
       public,
