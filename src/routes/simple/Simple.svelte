@@ -1,5 +1,5 @@
 <script>
-  export let data, helpers;
+  export let data, helpers, settings;
 </script>
 
 <style>
@@ -13,7 +13,7 @@
   <title>{data.title}</title>
 </svelte:head>
 
-<a href="/">&LeftArrow; Home</a>
+<a href={settings['$$internal'].serverPrefix}>&LeftArrow; Home</a>
 
 <h1>{data.title}</h1>
 

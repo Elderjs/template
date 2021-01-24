@@ -1,5 +1,5 @@
 <script>
-  export let data; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
+  export let data, settings; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
   const { html, frontmatter } = data;
 </script>
 
@@ -49,7 +49,7 @@
 <svelte:head>
   <title>{frontmatter.title}</title>
 </svelte:head>
-<a href="/">&LeftArrow; Home</a>
+<a href={settings['$$internal'].serverPrefix}>&LeftArrow; Home</a>
 
 <div class="title">
   <h1>{frontmatter.title}</h1>

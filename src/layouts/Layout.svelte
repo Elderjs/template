@@ -19,7 +19,7 @@
 </style>
 
 <svelte:head>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href={`${settings['$$internal'].serverPrefix}/style.css`} />
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>
 <div class="container">

@@ -1,7 +1,7 @@
 <script>
   import HookDetail from '../../components/HookDetail.svelte';
 
-  export let data;
+  export let data, settings;
 </script>
 
 <style>
@@ -15,7 +15,7 @@
   <title>{data.hook} Hook Interface: Elder.js Example Project</title>
 </svelte:head>
 
-<a href="/">&LeftArrow; Home</a>
+<a href={settings['$$internal'].serverPrefix}>&LeftArrow; Home</a>
 
 <HookDetail {...data} />
 
