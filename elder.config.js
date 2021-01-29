@@ -5,9 +5,8 @@ module.exports = {
   distDir: 'public',
   rootDir: process.cwd(),
   build: {},
-  server: {
-    prefix: '',
-  },
+  prefix: '',
+  server: {},
   debug: {
     stacks: false,
     hooks: false,
