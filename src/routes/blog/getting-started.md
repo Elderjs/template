@@ -167,3 +167,7 @@ On this Project:
 | -- assets
 | -- | -- items to be copied to the 'distDir' defined in your 'elder.config.js'. See hooks.js.
 ```
+
+## Deploying Elder.js
+
+If you are looking to deploy your staticly generated Elder.js site [Cloudflare Pages has a great guide](https://developers.cloudflare.com/pages/how-to/elderjs).
