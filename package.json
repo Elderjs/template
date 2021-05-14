@@ -1,15 +1,15 @@
 {
   "name": "elderjs-template",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps. The template lives at https://github.com/elderjs/template and the Elder.js source is here: https://github.com/elderjs/elderjs",
   "main": "./src/build.js",
   "scripts": {
-    "start": "npm run build:rollup && npm run dev:server",
+    "start": "npm run dev",
     "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
     "build:rollup": "rollup -c",
     "build:html": "node ./src/build.js",
-    "dev:rollup": "rollup  -c -w --no-watch.clearScreen",
-    "dev:server": "nodemon",
+    "dev": "rollup  -c -w --no-watch.clearScreen",
+    "serve": "node ./src/cleanPublic.js && npm run build:rollup && NODE_ENV=production node ./src/server.js",
     "eslint": "eslint --ext .js .",
     "eslint:fix": "eslint --fix --ext .js .",
     "prettier:svelte": "prettier --write --plugin-search-dir=. ./**/*.svelte"
@@ -19,7 +19,7 @@
     "node": ">= 12.0.0"
   },
   "dependencies": {
-    "@elderjs/elderjs": "^1.3.3",
+    "@elderjs/elderjs": "^1.4.0",
     "@elderjs/plugin-browser-reload": "^0.1.21",
     "@elderjs/plugin-markdown": "^0.1.21",
     "body-parser": "^1.19.0",

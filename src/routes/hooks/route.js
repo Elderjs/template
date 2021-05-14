@@ -12,7 +12,7 @@ module.exports = {
     }));
     return requestObjects;
   },
-  permalink: ({ request }) => `/${request.slug}/`,
+  permalink: '/:slug/',
   data: ({ request }) => {
     // Data takes the 'request' objects returned from the 'all' function and looks up the hookDetails from the hookInterface.
     const { slug } = request;

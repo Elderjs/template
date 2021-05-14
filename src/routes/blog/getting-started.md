@@ -12,14 +12,15 @@ Let's take a look:
 
 ## 4 Routes To Explore
 
-This project is structured to follow the required Elder.js folder structure which you can see below, but in short you've got 3 routes in the `./src/routes/` folder. They are "hooks", "home", and "blog."
+This project is structured to follow the required Elder.js folder structure which you can see below, but in short you've got several routes in the `./src/routes/index.js` file.
 
-Each of these 4 routes are designed to showcase something different.
+Each of these routes are designed to showcase something different.
 
 - [Simple](/simple/) - The a simple route with an overview of how routing works in Elder.js.
 - Home - This is the simple route to illustrate the basic concepts. Open up the `./src/routes/home/route.js` file and look at how the `all` and `permalink` functions work. Then look at the `Home.svelte` to see what is going on there.
 - Blog - This route is powered entirely by the `@elderjs/plugin-markdown` which is configured in your `elder.config.js`. You can find this page's markdown at `./src/routes/blog/getting-started.md`. Try duplicating one of the existing markdown files and renaming it. You'll see that the homepage will change next time you build or reload the server.
 - Hooks - The hooks route illustrates how to add data to a page and the data flow. In the `./src/routes/hooks/route.js` file you'll see we're importing the hookInterface and then building a page for each hook using the `all` and `permalink` functions. Next open up the `./src/routes/hooks/route.js` and the `./src/routes/hooks/Hooks.svelte` to see how data is passed from request --> data --> Svelte.
+- SSR - This is an example of how to use Elder.js in SSR mode to create dynamic experiences.
 
 ## Writing Your First Hook:
 

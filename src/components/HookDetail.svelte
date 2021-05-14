@@ -74,7 +74,8 @@
   <div class="overview">
     <span class="hook-name">
       {#if hook.link && hook.link.length > 0}<a href={hook.link}>{hook.hook}</a>{:else}{hook.hook}{/if}
-    </span> : {hook.context}
+    </span>
+    : {hook.context}
   </div>
   <div class="use">
     {@html hook.use}

@@ -1,4 +1,5 @@
 <script>
+  import style from '../../assets/style.css';
   export let templateHtml, settings;
 </script>
 
@@ -19,7 +20,6 @@
 </style>
 
 <svelte:head>
-  <link rel="stylesheet" href="/style.css" />
   <!-- You can remove this balloon it is just for hover effects -->
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
 </svelte:head>

@@ -31,7 +31,7 @@ These include:
 
 To see static export in action run `npm run build` in your terminal. We think you'll be surprised how fast it builds. :)
 
-If you are looking to use Elder.js as an `express` middleware make sure to look at the <a href="/middlewareRequest/">`middlewareRequest`</a> hook as it should empower you to do anything you'd need to do with Express.
+If you are looking to use Elder.js as an `express` middleware make sure to look at the <a href="/middleware/">`middleware`</a> hook as it should empower you to do anything you'd need to do with Express.
 
 ## What Parts of Elder.js Aren't Great?
 
@@ -46,12 +46,6 @@ That said, this means that if you need a different Rollup config than the standa
 **A Very Strict Folder Structure**
 
 Because of Elder.js' complex Rollup config it needs to follow a pretty specific file structure. This project matches that file structure and you can learn more about it on the <a href="/getting-started/">getting started</a> page.
-
-**Express Middleware / Server**
-
-In the interest of being objective, it is worth noting that the 'server' functionality powered by Express like middleware was initially used as a 'previewer' to allow us to see pages of our statically generated site BEFORE waiting for 1,000s of pages to build.
-
-Only later did we realize that others would be interested in the same functionality to build server rendered Svelte apps.
 
 **No Live Reload / HMR support (Yet)**
 
