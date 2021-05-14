@@ -68,6 +68,11 @@
   }
 </style>
 
+<svelte:head>
+  <!-- You can remove this balloon it is just for hover effects -->
+  <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
+</svelte:head>
+
 <div class="hook">
   {#if i || i === 0}<span class="hook-number">{i + 1}.</span>{/if}
 

@@ -19,10 +19,6 @@
   }
 </style>
 
-<svelte:head>
-  <!-- You can remove this balloon it is just for hover effects -->
-  <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
-</svelte:head>
 <div class="container">
   {@html templateHtml}
 </div>
