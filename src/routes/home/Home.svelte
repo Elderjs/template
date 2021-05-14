@@ -145,7 +145,7 @@
 
   <p>
     <strong>Note:</strong> Make sure you also check out <code>npm run build</code>, which will statically generate this
-    same site so that it can be deployed with a static site host such as Netlify, Cloudflare Workers, Vercel, or S3.
+    same site so that it can be deployed with a static site host such as Netlify, Cloudflare Pages, Vercel, or S3.
   </p>
 </div>
 
