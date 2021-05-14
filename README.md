@@ -24,36 +24,34 @@ npm install # or just yarn
 ### Start Project:
 
 ```bash
-npm start
+npm start # or npm run dev
 ```
 
 Navigate to [localhost:3000](http://localhost:3000). You should see your app running.
 
-### Development:
+This spawns a development server, so simply edit a file in `src`, save it, and reload the page to see your changes.
 
-For development, we recommend running two separate terminals. One for the server and the other for rollup.
+You can also see a live demo of this template: [https://elderjs.netlify.app/](https://elderjs.netlify.app/)
 
-**Terminal 1**
-
-```bash
-npm run dev:server # `npm start` above starts a server, but doesn't rebuild your Svelte components on change.
-```
-
-**Terminal 2**
-
-```bash
-npm run dev:rollup # This rebuilds your svelte components on change.
-```
-
-Once you have these two terminals open, edit a component file in `src`, save it, and reload the page to see your changes.
-
-### To Build HTML:
+### To Build HTML for Production:
 
 ```bash
 npm run build
 ```
 
-This will build all of your html into the /public/ folder.
+Let the build finish. It will put all of your staticly generated files in `./public`.
+
+If you wish to preview you can use:
+
+```bash
+npx sirv-cli public
+```
+
+### To Run in SSR Mode for Production:
+
+```bash
+npm run serve
+```
 
 ### What to Expect
 
