@@ -2,6 +2,7 @@
   import HookDetail from '../../components/HookDetail.svelte';
 
   export let data;
+  export let request;
 </script>
 
 <style>
@@ -12,7 +13,7 @@
 </style>
 
 <svelte:head>
-  <title>{data.hook} Hook Interface: Elder.js Example Project</title>
+  <title>{data.hook.hook} Hook Interface: Elder.js Example Project</title>
 </svelte:head>
 
 <a href="/">&LeftArrow; Home</a>
