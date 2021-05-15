@@ -22,6 +22,9 @@
     grid-template-columns: 1fr;
     margin: 3rem 0;
   }
+  ul li {
+    margin-bottom: 0.3rem;
+  }
 
   @media (min-width: 768px) {
     .entries {
@@ -108,7 +111,7 @@
 <div class="about">
   <h2>About This Template</h2>
   <p>
-    This example project is made up of 4 routes; you can find them by looking within the <span class="code"
+    This example project is made up of 5 routes; you can find them by looking within the <span class="code"
       >./src/routes/</span> folder. They are:
   </p>
 
@@ -122,6 +125,10 @@
     <li>
       Hooks - These are how you customize Elder.js. Details are below, and we've used the <span class="code"
         >hookInterface</span> to build out dedicated pages for each hook as well.
+    </li>
+    <li>
+      An SSR route which only works when Elder.js is in SSR mode. (<span class="code">npm run dev</span> or
+      <span class="code">npm run serve</span>)
     </li>
   </ul>
 
@@ -166,11 +173,20 @@
       <code>hydrate-client={JSON.stringify({})}</code> prop.
     </p>
     <p>
+      This means that if a page doesn't need dynamic JS it will have 0KB of JS code resulting in faster loading, lighter
+      weight websites.
+    </p>
+    <p>
       The <a href="https://svelte.dev/examples#clock">clock</a> on this page is an example of a component that has been hydrated
       on the client.
     </p>
     <p>This approach makes it easy to build SEO friendly websites, with Svelte for interactivity when needed.</p>
-    <p>By default all hydrated components are lazy loaded with an intersection observer.</p>
+    <p>
+      By default all hydrated components are lazy loaded with an intersection observer, but you can have full control
+      over how hydration is handled via <a href="https://elderguide.com/tech/elderjs/#hydration-options"
+        >several different hydration options</a
+      >.
+    </p>
   </div>
   <div class="right">
     <Clock hydrate-client={{}} />

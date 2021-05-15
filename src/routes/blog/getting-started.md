@@ -1,14 +1,11 @@
 ---
 title: 'Getting Started with Elder.js'
 excerpt: 'You have the starter template of Elder.js running. So what is next? This guide will help you explore the project.'
-coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author: Nick Reese
 ---
 
 Sweet! So you've got the Elder.js starter template up and running. What's next?
-
-Let's take a look:
 
 ## 4 Routes To Explore
 
@@ -22,7 +19,28 @@ Each of these routes are designed to showcase something different.
 - Hooks - The hooks route illustrates how to add data to a page and the data flow. In the `./src/routes/hooks/route.js` file you'll see we're importing the hookInterface and then building a page for each hook using the `all` and `permalink` functions. Next open up the `./src/routes/hooks/route.js` and the `./src/routes/hooks/Hooks.svelte` to see how data is passed from request --> data --> Svelte.
 - SSR - This is an example of how to use Elder.js in SSR mode to create dynamic experiences.
 
-## Writing Your First Hook:
+Now that you've got Elder.js up and running let's talk about some customization options.
+
+## How to Customize Elder.js
+
+### Plugins:
+
+Currently this template is running two plugins:
+
+- `@elderjs/plugin-markdown` to help us parse markdown files, generate pages, and make them available within Elder.js.
+- `@elderjs/plugin-browser-reload` to reload the browser when in dev server mode.
+
+If you are looking for other plugins check out these:
+
+- [Images](https://github.com/Elderjs/plugins/tree/master/packages/images) Easily add and manage responsive images with your Elder.js website.
+- [Critical Path CSS](https://github.com/Elderjs/plugins/tree/master/packages/critical-path-css) Quickly and easily generate and include critical path css for your Elder.js website.
+- [Sitemap](https://github.com/Elderjs/plugins/tree/master/packages/sitemap) Automatically generate the latest sitemap for your Elder.js website on build.
+- [References](https://github.com/Elderjs/plugins/tree/master/packages/references) Easily add wikipedia style references to your content with `ref` and `referenceList` shortcodes.
+- [i18n](https://github.com/kiuKisas/elderjs-plugin-i18n) Easily add internationalization to your Elder.js website.
+
+If you want to share an idea for a plugin or want to help develop an Elder.js plugin, check out [Plugin Ideas](https://github.com/Elderjs/elderjs/discussions/categories/plugin-ideas) discussion on the Elder.js repo.
+
+### Hooks: Customize and Control Elder.js:
 
 Once you've explored the templates above, it is worth looking a bit at how the hooks work.
 
@@ -65,11 +83,7 @@ In this hook we're just adding our analytics code at a priority of 1 (last).
 
 If stacks seem foreign, just remember they are a list of strings with some meta data.
 
-## Copying of Assets
-
-Another hook that you'll see is one that copies anything in your `./assets/` to the `distDir` defined in your `elder.config.js` (which is`./public/` folder by default in this project).
-
-## Hooks In Depth:
+### Hooks In Depth:
 
 Elder.js runs it's hooks system based on it's 'hookInterface'. This interface defines which hooks can do what and what properties they have.
 
@@ -102,7 +116,7 @@ Essentially only properties that are able to be mutated on a hook, will be mutat
 
 If you're interested in exploring hooks more check out the full <a href="https://elderguide.com/tech/elderjs/">Elder.js documentation on ElderGuide</a>.
 
-## A Brief Look At Shortcodes
+### A Brief Look At Shortcodes
 
 Shortcodes are a great way to customize otherwise static content. They are especially useful when using a CMS or external content store. The most common use cases include:
 
@@ -170,4 +184,20 @@ On this Project:
 
 ## Deploying Elder.js
 
-If you are looking to deploy your staticly generated Elder.js site [Cloudflare Pages has a great guide](https://developers.cloudflare.com/pages/how-to/elderjs).
+If you are looking to deploy your statically generated Elder.js site [Cloudflare Pages has a great guide](https://developers.cloudflare.com/pages/how-to/elderjs).
+
+## CSS:
+
+For this template any css in the `./src/layouts/Layout.svelte` will be made available on all pages. You can also import CSS like we do with the css file at `./assets/style.css` and that will get added to the CSS file Elder.js generates.
+
+## SSR and Dynamic Experiences:
+
+Elder.js started as a static site generator but today it is used in production as an SSR framework as well.
+
+For more information look at the route found in `./src/routes/ssr/`. In short, the `req` and `next` functions from `express` or `polka` (used in this template) are made available there. This means you'll have access to `sessions` and anything else you'd need to make logged in or otherwise dynamic experiences.
+
+For even more control make sure to checkout the [`middleware`](/middleware/) hook.
+
+## Copying of Assets
+
+Another hook that you'll see is one that copies anything in your `./assets/` to the `distDir` defined in your `elder.config.js` (which is`./public/` folder by default in this project).

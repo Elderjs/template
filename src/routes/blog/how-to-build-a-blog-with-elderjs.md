@@ -1,7 +1,6 @@
 ---
 title: 'How to Build a Blog With Elder.js'
 excerpt: 'Building a simple blog with Elder.js is easy. Just toss a few markdown files in a folder of this project!'
-coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author: Nick Reese
 ---
