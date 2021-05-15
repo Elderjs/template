@@ -22,9 +22,6 @@
     grid-template-columns: 1fr;
     margin: 3rem 0;
   }
-  ul li {
-    margin-bottom: 0.3rem;
-  }
 
   @media (min-width: 768px) {
     .entries {

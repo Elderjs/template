@@ -13,7 +13,7 @@ If you're wondering if Elder.js will support your use case we have 1 good rule t
 
 We like to think that Elder.js is great a building **websites**, regardless of whether they are statically generated or server rendered.
 
-If you're building an "App" you can definitely use Elder.js with hooks (make sure to look at the <a href="/middleware/">`middleware`</a> hook) but you may also want to explore <a href="https://kit.svelte.dev/">SvelteKit</a> as there are lots of guides on authentication and other common needs for Apps.
+If you're building an "App" you can definitely use Elder.js but if you want client side routing make sure to check out <a href="https://kit.svelte.dev/">SvelteKit</a>.
 
 ## Common Use Cases for Elder.js
 

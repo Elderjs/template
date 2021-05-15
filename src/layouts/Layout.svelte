@@ -30,6 +30,10 @@
   .footer a {
     color: #f4f7fb;
   }
+  :global(ul li),
+  :global(ol li) {
+    margin-bottom: 0.3rem;
+  }
 </style>
 
 <div class="container">
