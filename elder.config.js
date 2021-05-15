@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
   origin: '', // TODO: update this.
   lang: 'en',
