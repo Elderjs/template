@@ -135,14 +135,24 @@
     <span class="code">npm run dev</span> which will:
   </p>
   <ol>
-    <li>Spawn a dev server on the port defined in your `.env`. (Pro-tip: add `.env` to your .gitignore now)</li>
+    <li>
+      Spawn a dev server on the port defined in your <span class="code">.env</span>. (Pro-tip: add
+      <span class="code">.env</span> to your .gitignore now)
+    </li>
     <li>It will reload that dev server when changes are detected including rebundling your Svelte templates.</li>
   </ol>
 
-  <p>
-    <strong>Note:</strong> Make sure you also check out <code>npm run build</code>, which will statically generate this
-    same site so that it can be deployed with a static site host such as Netlify, Cloudflare Pages, Vercel, or S3.
-  </p>
+  <h3>Other NPM commands</h3>
+  <ol>
+    <li>
+      <code>npm run build</code>: will statically generate this same site so that it can be deployed with a static site
+      host such as Netlify, Cloudflare Pages, Vercel, or S3.
+    </li>
+    <li>
+      <code>npm run serve</code>: will start the server in production SSR mode which can be used with cluster mode or
+      PM2 to host Elder.js in a SSR fashion.
+    </li>
+  </ol>
 </div>
 
 <div class="hydrate">
