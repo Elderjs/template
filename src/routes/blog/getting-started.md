@@ -12,7 +12,7 @@ Let's take a look:
 
 ## 4 Routes To Explore
 
-This project is structured to follow the required Elder.js folder structure which you can see below, but in short you've got several routes in the `./src/routes/index.js` file.
+This project is structured to follow the required Elder.js folder structure which you can see below, but in short you've got several routes in the `./src/routes/` folder.
 
 Each of these routes are designed to showcase something different.
 

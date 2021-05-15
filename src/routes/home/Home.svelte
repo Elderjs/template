@@ -131,16 +131,12 @@
   </p>
   <h3>Development Environment:</h3>
   <p>
-    If you ran <span class="code">npm start</span> to see this page, we recommend you stop that command. Instead, open two
-    terminals and run:
+    If you ran <span class="code">npm start</span> to see this page this is the same as
+    <span class="code">npm run dev</span> which will:
   </p>
   <ol>
-    <li>
-      <span class="code">npm run dev:server</span> - This uses nodemon to restart the development server when files change.
-    </li>
-    <li>
-      <span class="code">npm run dev:rollup</span> - This uses Rollup to recompile your Svelte templates as you change them.
-    </li>
+    <li>Spawn a dev server on the port defined in your `.env`. (Pro-tip: add `.env` to your .gitignore now)</li>
+    <li>It will reload that dev server when changes are detected including rebundling your Svelte templates.</li>
   </ol>
 
   <p>
