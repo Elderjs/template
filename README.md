@@ -55,6 +55,6 @@ npm run serve
 
 ### What to Expect
 
-- Nodemon is watching your files for changes. It will restart when it needs to.
+- A dev server is watching your files for changes. It will restart when it needs to.
 - Rollup is watching your files for changes. It will restart when it needs to.
 - If your `elder.config.js` has `@elderjs/plugin-browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
