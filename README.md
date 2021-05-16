@@ -33,6 +33,13 @@ This spawns a development server, so simply edit a file in `src`, save it, and r
 
 You can also see a live demo of this template: [https://elderjs.pages.dev/](https://elderjs.pages.dev/)
 
+#### What to Expect
+
+- A dev server is watching your files for changes. It will restart when it needs to.
+- Rollup is watching your files for changes. It will restart when it needs to.
+- If your `elder.config.js` has `@elderjs/plugin-browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
+
+
 ### To Build HTML for Production:
 
 ```bash
@@ -52,9 +59,3 @@ npx sirv-cli public
 ```bash
 npm run serve
 ```
-
-### What to Expect
-
-- A dev server is watching your files for changes. It will restart when it needs to.
-- Rollup is watching your files for changes. It will restart when it needs to.
-- If your `elder.config.js` has `@elderjs/plugin-browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
