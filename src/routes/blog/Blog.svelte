@@ -1,5 +1,5 @@
 <script>
-  export let data; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
+  export let data, request; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
   const { html, frontmatter } = data;
 </script>
 
@@ -48,6 +48,8 @@
 
 <svelte:head>
   <title>{frontmatter.title}</title>
+  <meta name="description" content={frontmatter.excerpt} />
+  <link href={request.permalink} rel="canonical" />
 </svelte:head>
 <a href="/">&LeftArrow; Home</a>
 

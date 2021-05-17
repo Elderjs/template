@@ -14,9 +14,13 @@
 
 <svelte:head>
   <title>{data.hook.hook} Hook Interface: Elder.js Example Project</title>
+  <meta name="description" content="Hook details for {data.hook.hook} in Elder.js from the Hook Interface" />
+  <link href={request.permalink} rel="canonical" />
 </svelte:head>
 
 <a href="/">&LeftArrow; Home</a>
+
+<h1>{data.hook.hook}</h1>
 
 <HookDetail {...data} />
 
