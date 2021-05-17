@@ -21,6 +21,10 @@ Each of these routes are designed to showcase something different.
 
 Now that you've got Elder.js up and running let's talk about some customization options.
 
+## Elder.js Community Discord
+
+Getting started with Elder.js and want to connect with other users. Join us over at the [Elder.js discord](https://discord.gg/6eP8f8df4y).
+
 ## How to Customize Elder.js
 
 ### Plugins:
