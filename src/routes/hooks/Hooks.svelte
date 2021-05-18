@@ -20,7 +20,7 @@
 
 <a href="/">&LeftArrow; Home</a>
 
-<h1>{data.hook.hook}</h1>
+<h1>Elder.js Hook: {data.hook.hook}</h1>
 
 <HookDetail {...data} />
 

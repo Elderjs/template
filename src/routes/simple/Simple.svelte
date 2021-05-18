@@ -1,5 +1,5 @@
 <script>
-  export let data, helpers;
+  export let data, request;
 </script>
 
 <style>
@@ -11,6 +11,8 @@
 
 <svelte:head>
   <title>{data.title}</title>
+  <meta name="description" content="A Simple Route" />
+  <link href={request.permalink} rel="canonical" />
 </svelte:head>
 
 <a href="/">&LeftArrow; Home</a>
@@ -19,7 +21,7 @@
 
 <ul>
   {#each data.steps as step}
-    <li>{step}</li>
+    <li>{@html step}</li>
   {/each}
 </ul>
 

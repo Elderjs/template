@@ -27,6 +27,9 @@ module.exports = {
       port: 8080,
       reload: false, // if you are having issues with reloading not working, change to true.
     },
+    '@elderjs/plugin-seo-check': {
+      display: ['errors', 'warnings'], // If the errors are too verbose remove 'warnings'
+    },
   },
   shortcodes: { closePattern: '}}', openPattern: '{{' },
 };

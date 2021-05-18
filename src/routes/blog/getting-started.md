@@ -25,6 +25,22 @@ Now that you've got Elder.js up and running let's talk about some customization 
 
 Getting started with Elder.js and want to connect with other users? Join us over at the [Elder.js channel](https://discord.gg/rxc2yh5Pxa) within the official Svelte discord.
 
+## SEO Auditing
+
+As you play with this template you'll notice that there is some SEO auditing going on.
+
+Under the hood Elder.js uses [`@elderjs/plugin-seo-check`](https://github.com/Elderjs/plugins/tree/master/packages/seo-check) to check each page generated for more than 50 common search engine optimization (SEO) issues.
+
+If for some reason these warnings are to verbose you can adjust the level by editing your `./elder.config.js` to be:
+
+```js
+'@elderjs/plugin-seo-check': {
+  display: ['errors'], // If the errors are too verbose remove 'warnings'
+},
+```
+
+This will silence some of the more opinionated rules.
+
 ## How to Customize Elder.js
 
 ### Plugins:
@@ -190,7 +206,7 @@ On this Project:
 
 If you are looking to deploy your statically generated Elder.js site [Cloudflare Pages has a great guide](https://developers.cloudflare.com/pages/how-to/elderjs).
 
-## CSS:
+## Customizing The CSS:
 
 For this template any css in the `./src/layouts/Layout.svelte` will be made available on all pages. You can also import CSS like we do with the css file at `./assets/style.css` and that will get added to the CSS file Elder.js generates.
 

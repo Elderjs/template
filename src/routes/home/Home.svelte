@@ -195,7 +195,7 @@
   </div>
 </div>
 
-<h2>The Hook Interface</h2>
+<h2>The Elder.js Hook Interface</h2>
 
 <p>
   Once you've digested the guides above and understand how to handle client hydration, we encourage you to explore the

@@ -22,7 +22,7 @@ To start, open up the markdown file powering this page at: `./src/routes/blog/ho
 Once you've got it open, make some small changes, save the file and restart the server.
 When you reload this page you should see your changes.
 
-## Adding Markdown Files
+## Adding Markdown Files to Your Blog
 
 Once you've edited this page, try duplicating and renaming one of the files in the `./src/routes/blog/` folder. Give the new file name anything you'd like.
 
