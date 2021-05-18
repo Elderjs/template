@@ -23,7 +23,7 @@ Now that you've got Elder.js up and running let's talk about some customization 
 
 ## Elder.js Community Discord
 
-Getting started with Elder.js and want to connect with other users? Join us over at the [Elder.js discord](https://discord.gg/6eP8f8df4y).
+Getting started with Elder.js and want to connect with other users? Join us over at the [Elder.js channel](https://discord.gg/rxc2yh5Pxa) within the Official Svelte discord.
 
 ## How to Customize Elder.js
 
