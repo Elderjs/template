@@ -1,5 +1,5 @@
 <script>
-  export let data, request; // data is mainly being populated from the /plugins/edlerjs-plugin-markdown/index.js
+  export let data, request; // data is mainly being populated from the @elderjs/plugin-markdown
   const { html, frontmatter } = data;
 </script>
 
