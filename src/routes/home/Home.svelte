@@ -206,8 +206,8 @@
 </p>
 <div />
 <img
-  src="https://elderguide.com/images/elderjs-hooks-v100.png"
-  alt="Elder.js hook Lifecycle"
+  src="https://elderguide.com/images/elderjs-hook-lifecycle-v13.png"
+  alt="Elder.js hook Lifecycle v1.3"
   style="max-width:100%; margin:1rem 0;" />
 
 <div class="hooks">
