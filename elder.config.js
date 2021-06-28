@@ -8,6 +8,9 @@ module.exports = {
   build: {},
   prefix: '', // If you want your site to be built within a sub folder within your `distDir` you can use this.
   server: {},
+  props: {
+    compress: true,
+  },
   debug: {
     stacks: false, // output details of the stack consolidation process.
     hooks: false, // outputs the details of each hook as they are run.

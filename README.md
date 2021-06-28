@@ -39,6 +39,10 @@ You can also see a live demo of this template: [https://elderjs.pages.dev/](http
 - Rollup is watching your files for changes. It will restart when it needs to.
 - If your `elder.config.js` has `@elderjs/plugin-browser-reload': {}` in it's plugins, your browser will automatically restart after the server restarts.
 
+**esbuild**
+
+If you are looking for a faster development experience run `npm run esbuild` this is experimental but will be improving rapidly.
+
 ### To Build HTML for Production:
 
 ```bash

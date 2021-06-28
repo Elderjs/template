@@ -65,6 +65,8 @@ SvelteKit uses Vite and HMR which result in a bit better developer experience.
 
 To be candid, Elder.js's biggest drawback is it's very complex Rollup configuration that is internalized into Elder.js which makes it hard to edit for custom needs.
 
+As of v1.5, you can also use `npm run esbuild` to use the esbuild bundler which is much faster.
+
 **A Very Strict Folder Structure**
 
 Because of Elder.js' complex Rollup config it needs to follow a pretty specific file structure. This project matches that file structure and you can learn more about it on the <a href="/getting-started/">getting started</a> page.
