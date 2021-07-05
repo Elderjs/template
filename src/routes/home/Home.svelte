@@ -191,7 +191,7 @@
     </p>
   </div>
   <div class="right">
-    <Clock hydrate-client={{ willThisBreak: '""}{))((èé', p }} />
+    <Clock hydrate-client={{}} />
   </div>
 </div>
 
