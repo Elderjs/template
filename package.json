@@ -20,7 +20,7 @@
     "node": ">= 12.0.0"
   },
   "dependencies": {
-    "@elderjs/elderjs": "^1.5.8",
+    "@elderjs/elderjs": "^1.5.9",
     "@elderjs/plugin-browser-reload": "^1.2.0",
     "@elderjs/plugin-markdown": "^1.2.0",
     "@elderjs/plugin-seo-check": "^1.2.0",
