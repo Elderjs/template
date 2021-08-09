@@ -1,6 +1,6 @@
 require('dotenv').config();
 module.exports = {
-  origin: 'https://example.com', // TODO: update this. Add your domain name without trailing slash.
+  origin: 'https://example.com', // TODO: update this. The URL of your site's root, without a trailing slash
   lang: 'en',
   srcDir: 'src',
   distDir: 'public',
