@@ -1,11 +1,12 @@
 <script>
   export let request;
+  export let settings;
 </script>
 
 <svelte:head>
   <title>Test Title: {request.foo} {request.bar}</title>
   <meta name="description" content="Test Description: {request.foo} {request.bar}" />
-  <link href={request.permalink} rel="canonical" />
+  <link href="{settings.origin}{request.permalink}" rel="canonical" />
 </svelte:head>
 
 These params are generated from the url. They are only available in SSR mode unless the `all()` function returns

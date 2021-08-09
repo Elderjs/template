@@ -1,5 +1,5 @@
 <script>
-  export let data, request; // data is mainly being populated from the @elderjs/plugin-markdown
+  export let data, request, settings; // data is mainly being populated from the @elderjs/plugin-markdown
   const { html, frontmatter } = data;
 </script>
 
@@ -49,7 +49,7 @@
 <svelte:head>
   <title>{frontmatter.title}</title>
   <meta name="description" content={frontmatter.excerpt} />
-  <link href={request.permalink} rel="canonical" />
+  <link href="{settings.origin}{request.permalink}" rel="canonical" />
 </svelte:head>
 <a href="/">&LeftArrow; Home</a>
 

@@ -2,7 +2,7 @@
   import HookDetail from '../../components/HookDetail.svelte';
   import BlogTeaser from '../../components/BlogTeaser.svelte';
   import Clock from '../../components/Clock.svelte';
-  export let data, helpers;
+  export let data, helpers, settings;
 
   // add permalinks to the hook list so we can link to the posts.
   const hooks = data.hookInterface.map((hook) => ({
@@ -68,7 +68,7 @@
 <svelte:head>
   <title>Elder.js Template: Home</title>
   <meta name="description" content="Elder.js Starter Template: It's A Tutorial Too!" />
-  <link href="/" rel="canonical" />
+  <link href="{settings.origin}/" rel="canonical" />
 </svelte:head>
 
 {#if data.testingHooks}
