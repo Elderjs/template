@@ -8,6 +8,10 @@ code {
   display: inline-block;
 }
 
+.shiki code {
+  background: inherit;
+}
+
 h1,
 h2,
 h3,
