@@ -5,6 +5,8 @@ date: '2020-03-16T05:35:07.322Z'
 author: Nick Reese
 ---
 
+{{box class="yellow"}}Your content here{{/box}}
+
 Sweet! So you've got the Elder.js starter template up and running. What's next?
 
 ## 4 Routes To Explore
