@@ -1,6 +1,6 @@
 {
   "name": "elderjs-template",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps. The template lives at https://github.com/elderjs/template and the Elder.js source is here: https://github.com/elderjs/elderjs",
   "main": "./src/build.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "node": ">= 12.0.0"
   },
   "dependencies": {
-    "@elderjs/elderjs": "^1.6.0",
+    "@elderjs/elderjs": "^1.6.1",
     "@elderjs/plugin-browser-reload": "^1.3.2",
     "@elderjs/plugin-markdown": "^1.3.2",
     "@elderjs/plugin-seo-check": "^1.3.2",
