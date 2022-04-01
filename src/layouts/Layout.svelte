@@ -39,6 +39,11 @@
 <svelte:head>
   <!-- You can remove this balloon it is just for hover effects -->
   <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css" />
+  <script>
+    document.addEventListener('ejs', (e) => {
+      console.log('Layout.svelte > Component Mount Detail', e.detail);
+    });
+  </script>
 </svelte:head>
 
 <div class="container">
