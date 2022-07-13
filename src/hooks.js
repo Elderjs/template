@@ -47,14 +47,10 @@ const hooks = [
 
       // copy assets folder to public destination
       glob.sync(path.resolve(settings.rootDir, './assets/**/*')).forEach((file) => {
-        const parsed = path.parse(file);
-        // Only write the file/folder structure if it has an extension
-        if (parsed.ext && parsed.ext.length > 0) {
-          const relativeToAssetsFolder = path.relative(path.join(settings.rootDir, './assets'), file);
-          const outputPath = path.resolve(settings.distDir, relativeToAssetsFolder);
-          fs.ensureDirSync(path.parse(outputPath).dir);
-          fs.outputFileSync(outputPath, fs.readFileSync(file));
-        }
+        const relativeToAssetsFolder = path.relative(path.join(settings.rootDir, './assets'), file);
+        const outputPath = path.resolve(settings.distDir, relativeToAssetsFolder);
+        fs.ensureDirSync(path.parse(outputPath).dir);
+        fs.outputFileSync(outputPath, fs.readFileSync(file));
       });
     },
   },
